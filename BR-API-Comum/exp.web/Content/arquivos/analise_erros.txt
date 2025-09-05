@@ -1,0 +1,50 @@
+[ 07/08/2019 14:00:00 ] [ AGENDA - INICIADA ]
+[ 07/08/2019 14:00:00 ] [ ARQUIVO ] [ Abrindo arquivo para gravações. ]
+[ 07/08/2019 14:00:00 ] [ METODO - CHAMADA ] [ Chamando o metodo da buscar das informações. ]
+[ 07/08/2019 14:00:02 ] [ METODO - RETORNO ] [ Retorno do metodo de busca concluida. ]
+[ 07/08/2019 14:00:02 ] [ ********************* ]
+[ 07/08/2019 14:00:02 ] [ RESULTADO-ParceiroResult ] [ 3645 ]
+[ 07/08/2019 14:00:02 ] [ ********************* ]
+[ 07/08/2019 14:00:03 ] [ AGENDA - FINALIZADA ]
+[ 07/08/2019 14:45:00 ] [ AGENDA - INICIADA ]
+[ 07/08/2019 14:45:00 ] [ ARQUIVO ] [ Abrindo arquivo para gravações. ]
+[ 07/08/2019 14:45:00 ] [ METODO - CHAMADA ] [ Chamando o metodo da buscar das informações. ]
+[ 07/08/2019 14:45:58 ] [ METODO - RETORNO ] [ Retorno do metodo de busca concluida. ]
+[ 07/08/2019 14:45:59 ] [ ********************* ]
+[ 07/08/2019 14:45:59 ] [ RESULTADO-ParceiroResult ] [ 3645 ]
+[ 07/08/2019 14:45:59 ] [ ********************* ]
+[ 07/08/2019 14:46:43 ] [ ********************* ]
+[ 07/08/2019 14:46:43 ] [ FILTRADO-TOTAL ] [ 4 ]
+[ 07/08/2019 14:46:43 ] [ ********************* ]
+[ 07/08/2019 14:53:55 ] [ EMAIL ] [ Montagem concluída. ]
+[ 07/08/2019 14:53:55 ] [ SMTP-FAILED ] [ Exception caught in RetryIfBusy(): System.Net.Mail.SmtpException: Falha ao enviar email. ---> System.IO.DirectoryNotFoundException: Não foi possível localizar uma parte do caminho 'C:\Temp\emails\d3d5d300-3f69-49df-97df-6dfdf990d106.eml'.
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode)
+   em System.Net.Mail.SmtpClient.GetFileMailWriter(String pickupDirectory)
+   em System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.Mail.SmtpClient.Send(MailMessage message)
+   em exp.web.Code.Jobs.VerificarVendaIndicadaJobTeste.Execute(IJobExecutionContext context) na C:\repo\BRCONSORCIOS-SITES\SITES\4ANALISE\BR-API-Comum\exp.web\Code\Jobs\VerificarVendaIndicadaJob.cs:linha 365 ]
+[ 07/08/2019 14:53:55 ] [ EMAIL ] [ Disparo efetuado. ]
+[ 07/08/2019 14:53:55 ] [ HTML ] [ Escrevendo Html. ]
+[ 07/08/2019 14:53:55 ] [ HTML ] [ Escreveu html no arquivo. ]
+[ 07/08/2019 14:53:55 ] [ ARQUIVO ] [ Fechando arquivo para gravações. ]
+[ 07/08/2019 14:53:55 ] [ AGENDA - FINALIZADA ]
+[ 13/08/2019 10:45:00 ] [ AGENDA - INICIADA ]
+[ 13/08/2019 10:45:00 ] [ ARQUIVO ] [ Abrindo arquivo para gravações. ]
+[ 13/08/2019 10:45:00 ] [ METODO - CHAMADA ] [ Chamando o metodo da buscar das informações. ]
+[ 13/08/2019 10:45:01 ] [ METODO - RETORNO ] [ Retorno do metodo de busca concluida. ]
+[ 13/08/2019 10:45:01 ] [ ********************* ]
+[ 13/08/2019 10:45:01 ] [ RESULTADO-ParceiroResult ] [ 4042 ]
+[ 13/08/2019 10:45:01 ] [ ********************* ]
+[ 13/08/2019 10:45:02 ] [ ********************* ]
+[ 13/08/2019 10:45:02 ] [ FILTRADO-TOTAL ] [ 2 ]
+[ 13/08/2019 10:45:02 ] [ ********************* ]
+[ 13/08/2019 10:45:04 ] [ EMAIL ] [ Montagem concluída. ]
+[ 13/08/2019 10:45:04 ] [ EMAIL ] [ Disparo efetuado. ]
+[ 13/08/2019 10:45:04 ] [ HTML ] [ Escrevendo Html. ]
+[ 13/08/2019 10:45:04 ] [ HTML ] [ Escreveu html no arquivo. ]
+[ 13/08/2019 10:45:04 ] [ ARQUIVO ] [ Fechando arquivo para gravações. ]
+[ 13/08/2019 10:45:04 ] [ AGENDA - FINALIZADA ]

@@ -1,0 +1,16 @@
+#############################################################
+Data:13-08-2019 11:18:58
+URL:http://localhost:17536/api/EmitirBoletodaCompra/?id=200803
+=========== [XML_RETORNO] ===========
+[XML_RETORNO]: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><cnsEmissaoBoletoResponse xmlns="http://www.cnpm.com.br/"><cnsEmissaoBoletoResult><QT_Moeda>0</QT_Moeda><VL_Moeda>0</VL_Moeda><VL_Documento>0</VL_Documento><VL_Desconto>0</VL_Desconto><VL_Outras_Deducoes>0</VL_Outras_Deducoes><VL_Multa>0</VL_Multa><VL_Outros_Acrescimos>0</VL_Outros_Acrescimos><VL_Cobrado>0</VL_Cobrado><Return_Code>0</Return_Code><ErrMsg>Erro na execução da procedure st_IeEmissaoBoletoAvulsoAdd: Tempo limite expirou. O tempo limite esgotou antes da conclusão da operação ou o servidor não está respondendo.; ExecProc at offset 566 in file:line:column c:\Newcon_Enterprise\web\Intranet\cnpm_db\clsDB.cs:333:21
+
+ExecProc at offset 53 in file:line:column c:\Newcon_Enterprise\web\Intranet\cnpm_db\clsDB.cs:309:13
+
+cnsEmissaoBoletoAvulso at offset 1514 in file:line:column c:\Newcon_Enterprise\web\Intranet\cnpm_conpv\clsVenda.cs:831:13
+
+prcEmiteBoletoProposta at offset 258 in file:line:column &lt;filename unknown&gt;:0:0
+
+prcEmiteBoletoProposta at offset 765 in file:line:column &lt;filename unknown&gt;:0:0
+
+</ErrMsg></cnsEmissaoBoletoResult></cnsEmissaoBoletoResponse></soap:Body></soap:Envelope>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<conteudoXml>
+    <id>7</id>
+    <tipo_id>200</tipo_id>
+    <titulo>Linha Convencional</titulo>
+    <secao>Linha Convencional</secao>
+    <sinopse>A Transportes Coletivos Grande Londrina acompanha o crescimento da cidade levando ônibus a todas as
+        regiões.
+    </sinopse>
+    <tags>Linha Convencional</tags>
+    <conteudotexto>&lt;p&gt;A Transportes Coletivos Grande Londrina acompanha o crescimento da cidade levando &amp;ocirc;nibus
+        a todas as regi&amp;otilde;es. Possui 129 vias de atendimento regular, contemplando todos os bairros de
+        Londrina. Consulte as linhas convencionais abaixo e trace sua rota.&lt;/p&gt;
+    </conteudotexto>
+    <dtpublicacao>2012-05-17T00:00:00</dtpublicacao>
+    <path>por-dentro-das-granjas/noticias/</path>
+    <manchete>false</manchete>
+    <capa>false</capa>
+    <ordem>0</ordem>
+    <disponivel>true</disponivel>
+    <usuario_criador>1</usuario_criador>
+    <dtcriado>2012-06-10T23:52:38</dtcriado>
+    <usuario_modificou>1</usuario_modificou>
+    <dtmodificado>2012-06-18T11:39:15</dtmodificado>
+    <conteditorias>Ações TCGL</conteditorias>
+    <conteudosanexos/>
+</conteudoXml>

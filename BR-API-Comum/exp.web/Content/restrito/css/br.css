@@ -1,0 +1,73 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #af0611;
+    margin: 0;
+}
+
+#img {
+    margin-top: 150px;
+    position: relative;
+}
+
+#img img {
+    margin: auto;
+    display: block;
+}
+
+#img h2 {
+    color: #fff;
+    font-family: Arial;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#celular {
+    display: none;
+}
+
+#celular h2 {
+    color: #fff;
+    font-family: Arial;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#celular ul {
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+}
+
+#celular ul li {
+    width: 33.333333%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#celular ul li a {
+    display: inline-block;
+}
+
+#celular ul li a img {
+    width: 100px;
+}
+
+
+/*Celular adapter ---------------------------------------------------*/
+
+@media (max-width: 799.999999px) {
+    #celular {
+        display: block;
+    }
+
+    #img {
+        display: none;
+    }
+}

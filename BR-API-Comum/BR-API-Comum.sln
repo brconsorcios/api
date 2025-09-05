@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exp.dados", "exp.dados\exp.dados.csproj", "{F2ECFC12-95B1-4BCD-8BB5-48B77ADAD7B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exp.core", "exp.core\exp.core.csproj", "{B89EEE44-8995-45F3-9D32-DD3163FF6785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exp.web", "exp.web\exp.web.csproj", "{DD972998-77DD-4024-8436-DC7B32DAEF3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2ECFC12-95B1-4BCD-8BB5-48B77ADAD7B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2ECFC12-95B1-4BCD-8BB5-48B77ADAD7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2ECFC12-95B1-4BCD-8BB5-48B77ADAD7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2ECFC12-95B1-4BCD-8BB5-48B77ADAD7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B89EEE44-8995-45F3-9D32-DD3163FF6785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89EEE44-8995-45F3-9D32-DD3163FF6785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89EEE44-8995-45F3-9D32-DD3163FF6785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89EEE44-8995-45F3-9D32-DD3163FF6785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD972998-77DD-4024-8436-DC7B32DAEF3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD972998-77DD-4024-8436-DC7B32DAEF3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD972998-77DD-4024-8436-DC7B32DAEF3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD972998-77DD-4024-8436-DC7B32DAEF3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://erp-desenv:8040/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = exp.core\\exp.core.csproj
+		SccProjectName1 = exp.core
+		SccLocalPath1 = exp.core
+		SccProjectUniqueName2 = exp.dados\\exp.dados.csproj
+		SccProjectName2 = exp.dados
+		SccLocalPath2 = exp.dados
+		SccProjectUniqueName3 = exp.web\\exp.web.csproj
+		SccProjectName3 = exp.web
+		SccLocalPath3 = exp.web
+	EndGlobalSection
+EndGlobal

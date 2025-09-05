@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<conteudoXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>58</id>
+    <tipo_id>1</tipo_id>
+    <titulo>Mais cinemas para Londrina</titulo>
+    <secao>Informativo</secao>
+    <sinopse>A Rede Cinesystem Cinemas está iniciando as suas operações no Londrina Norte Shopping, em Londrina (PR).
+    </sinopse>
+    <tags>grande londrina,transporte urbano</tags>
+    <conteudotexto>&lt;p&gt;&lt;img style="margin: 10px auto; display: block;" alt=""
+        src="../../../content/arquivos/conteudo/179_inforg.jpg" /&gt;&lt;/p&gt;
+        &lt;p&gt;A Rede Cinesystem Cinemas est&amp;aacute; iniciando as suas opera&amp;ccedil;&amp;otilde;es no Londrina
+        Norte Shopping, em Londrina (PR). Com seis salas, incluindo tr&amp;ecirc;s 3D, que ser&amp;atilde;o abertas
+        gradativamente, a unidade tem capacidade para 1.540 lugares.&lt;/p&gt;
+        &lt;p&gt;A grande novidade deste novo multiplex da empresa &amp;eacute; o sistema de &amp;ldquo;autosservi&amp;ccedil;o&amp;rdquo;,
+        onde o cliente compra os ingressos em esta&amp;ccedil;&amp;otilde;es de vendas com monitores &lt;i&gt;touch
+        screen&lt;/i&gt; e tamb&amp;eacute;m se serve sozinho dos produtos oferecidos na bomboni&amp;eacute;re. Com
+        isso, h&amp;aacute; um aumento na variedade de produtos, mais liberdade de escolha e o cliente faz suas compras
+        no seu tempo.&lt;/p&gt;
+        &lt;p&gt;O Cinesystem Londrina conta com tela gigante de 250m2 e todos os projetores das salas s&amp;atilde;o
+        digitais, al&amp;eacute;m de venda de ingressos online com lugar marcado nas sess&amp;otilde;es. As salas ainda
+        contam com acesso para portadores de defici&amp;ecirc;ncia e poltronas revestidas com couro ecol&amp;oacute;gico,
+        bra&amp;ccedil;os mais largos, reclin&amp;aacute;veis e namoradeiras.&lt;/p&gt;
+        &lt;p&gt;Confira a programa&amp;ccedil;&amp;atilde;o do Cinesystem Londrina, acessando:&amp;nbsp;&lt;a
+        href="http://www.cinesystem.com.br/multiplex.asp?codCinema=219" target="_blank"&gt;http://www.cinesystem.com.br/multiplex.asp?codCinema=219&lt;/a&gt;&lt;/p&gt;
+        &lt;p style="text-align: left;"&gt;&lt;i&gt;Informa&amp;ccedil;&amp;otilde;es sujeitas a altera&amp;ccedil;&amp;otilde;es.&lt;br
+        /&gt;&lt;/i&gt;&lt;i&gt;Mudan&amp;ccedil;as referentes a data, locais e hor&amp;aacute;rios dos eventos s&amp;atilde;o
+        de inteira responsabilidade dos seus realizadores.&lt;/i&gt;&lt;span style="text-align: right;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+        &lt;p style="text-align: left;"&gt;&lt;i&gt;&lt;strong&gt;Texto:&lt;/strong&gt; Doc Comunica&amp;ccedil;&amp;atilde;o
+        (Com Ascom Londrina Norte Shopping)&lt;/i&gt;&lt;i&gt;&lt;br /&gt;&lt;/i&gt;&lt;/p&gt;
+    </conteudotexto>
+    <dtpublicacao>2012-11-22T16:18:00</dtpublicacao>
+    <manchete>false</manchete>
+    <capa>false</capa>
+    <ordem xsi:nil="true"/>
+    <disponivel>true</disponivel>
+    <usuario_criador xsi:nil="true"/>
+    <dtcriado>2012-11-23T10:54:28</dtcriado>
+    <usuario_modificou xsi:nil="true"/>
+    <dtmodificado xsi:nil="true"/>
+    <conteditorias>Agenda Cultural</conteditorias>
+    <conteudosanexos>~/content/arquivos/conteudo/179_infor.jpg</conteudosanexos>
+</conteudoXml>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ConfiguracoesXml>
+    <conta>Expertu</conta>
+    <assunto>Contato através do site</assunto>
+    <emails>expertu@expertu.com.br</emails>
+    <endlinha1>Rua Paranaguá,921</endlinha1>
+    <endlinha2>Centro - 86020.030 - Londrina - PR</endlinha2>
+    <endlinha3>Fone: 43 33391100</endlinha3>
+    <contato1>OUTRAS</contato1>
+    <contato2>INFORMAÇÕES</contato2>
+    <contato3>43 3339.1100</contato3>
+    <UrlSite>http://www.expertu.com.br</UrlSite>
+</ConfiguracoesXml>

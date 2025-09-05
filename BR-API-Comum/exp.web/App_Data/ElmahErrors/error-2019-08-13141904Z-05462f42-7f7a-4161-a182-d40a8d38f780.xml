@@ -1,0 +1,194 @@
+﻿<error errorId="05462f42-7f7a-4161-a182-d40a8d38f780" application="/LM/W3SVC/4/ROOT" host="DESKTOP-S3FFKRA" type="System.NullReferenceException" message="Referência de objeto não definida para uma instância de um objeto." source="exp.web" detail="System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.&#xD;&#xA;   em exp.web.Code.AcessoWebService.EmitirBoleto(EmissaoBoletoModel boleto) na C:\Dropbox\Repositorio_BRConsorcios\brconsorcios-area-adm-e-api\BR-API-Comum\exp.web\Code\AcessoWebService.cs:linha 2063&#xD;&#xA;   em exp.web.Code.BoletoNovo.Emitir(Int32 id) na C:\Dropbox\Repositorio_BRConsorcios\brconsorcios-area-adm-e-api\BR-API-Comum\exp.web\Code\BoletoNovo.cs:linha 55&#xD;&#xA;   em exp.web.Controllers.EmitirBoletodaCompraController.Post(Int32 id) na C:\Dropbox\Repositorio_BRConsorcios\brconsorcios-area-adm-e-api\BR-API-Comum\exp.web\Controllers\Compras\EmitirBoletodaCompraController.cs:linha 68&#xD;&#xA;   em lambda_method(Closure , Object , Object[] )&#xD;&#xA;   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.&lt;&gt;c__DisplayClass13.&lt;GetExecutor&gt;b__c(Object instance, Object[] methodParameters)&#xD;&#xA;   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)&#xD;&#xA;   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.&lt;&gt;c__DisplayClass5.&lt;ExecuteAsync&gt;b__4()&#xD;&#xA;   em System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)" user="consorciouniao.com.br" time="2019-08-13T14:19:04.1767084Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:44&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.9&#xD;&#xA;HTTP_AUTHORIZATION:Basic Y29uc29yY2lvdW5pYW8uY29tLmJyOmN1MTM0OTg=&#xD;&#xA;HTTP_COOKIE:WebApiBrConsorcios=I1DwGKe9poI=&#xD;&#xA;HTTP_HOST:localhost:17536&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36&#xD;&#xA;HTTP_SEC_FETCH_MODE:cors&#xD;&#xA;HTTP_POSTMAN_TOKEN:d4dc9b3a-42d3-3c04-94ca-2e0c182517dc&#xD;&#xA;HTTP_ORIGIN:chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop&#xD;&#xA;HTTP_SEC_FETCH_SITE:cross-site&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 44&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.9&#xD;&#xA;Authorization: Basic Y29uc29yY2lvdW5pYW8uY29tLmJyOmN1MTM0OTg=&#xD;&#xA;Cookie: WebApiBrConsorcios=I1DwGKe9poI=&#xD;&#xA;Host: localhost:17536&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36&#xD;&#xA;Sec-Fetch-Mode: cors&#xD;&#xA;Postman-Token: d4dc9b3a-42d3-3c04-94ca-2e0c182517dc&#xD;&#xA;Origin: chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop&#xD;&#xA;Sec-Fetch-Site: cross-site&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/4/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Dropbox\Repositorio_BRConsorcios\brconsorcios-area-adm-e-api\BR-API-Comum\exp.web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="consorciouniao.com.br" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="consorciouniao.com.br" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="44" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="4" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/4" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/api/EmitirBoletodaCompra/" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Dropbox\Repositorio_BRConsorcios\brconsorcios-area-adm-e-api\BR-API-Comum\exp.web\api\EmitirBoletodaCompra\" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="id=200803" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="59785" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/api/EmitirBoletodaCompra/" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="17536" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/api/EmitirBoletodaCompra/" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="44" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.9" />
+    </item>
+    <item name="HTTP_AUTHORIZATION">
+      <value string="Basic Y29uc29yY2lvdW5pYW8uY29tLmJyOmN1MTM0OTg=" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="WebApiBrConsorcios=I1DwGKe9poI=" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:17536" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="cors" />
+    </item>
+    <item name="HTTP_POSTMAN_TOKEN">
+      <value string="d4dc9b3a-42d3-3c04-94ca-2e0c182517dc" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="cross-site" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="id">
+      <value string="200803" />
+    </item>
+  </queryString>
+  <form>
+    <item name="">
+      <value string="------WebKitFormBoundaryEj7cOgvS4ANd6R20--&#xD;&#xA;" />
+    </item>
+  </form>
+  <cookies>
+    <item name="WebApiBrConsorcios">
+      <value string="I1DwGKe9poI=" />
+      <value string="I1DwGKe9poI=" />
+    </item>
+  </cookies>
+</error>

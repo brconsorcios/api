@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<conteudoXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>56</id>
+    <tipo_id>1</tipo_id>
+    <titulo>Outubro Rosa</titulo>
+    <secao>Informativo</secao>
+    <sinopse>O Outubro Rosa é um movimento mundial com o objetivo de conscientizar e combater o Câncer de Mama.
+    </sinopse>
+    <tags>grande londrina,transporte urbano</tags>
+    <conteudotexto>&lt;div class="wysiwygImgGrande"&gt;&lt;img style="float: left; margin: 10px;" alt=""
+        src="../../../content/arquivos/conteudo/168_inforg.jpg" height="272" width="363" /&gt;&lt;/div&gt;
+        &lt;p&gt;O Outubro Rosa &amp;eacute; um movimento mundial com o objetivo de conscientizar e combater o C&amp;acirc;ncer
+        de Mama, Segundo o Inca (Instituto Nacional de C&amp;acirc;ncer), a doen&amp;ccedil;a ser&amp;aacute; respons&amp;aacute;vel
+        por 52.680 novos casos no Brasil at&amp;eacute; o fim do ano.&lt;/p&gt;
+        &lt;p&gt;O movimento que dura o m&amp;ecirc;s inteiro busca alertar sobre os riscos e a necessidade de diagn&amp;oacute;stico
+        precoce deste tipo de c&amp;acirc;ncer, que &amp;eacute; o segundo mais recorrente no mundo, perdendo apenas
+        para o de pele.&lt;/p&gt;
+        &lt;p&gt;Toda mulher com mais de 40 anos deve fazer a mamografia anualmente, juntamente com o exame preventivo.
+        A mamografia pode ser realizada gratuitamente nas Unidades B&amp;aacute;sicas de Sa&amp;uacute;de de Londrina.
+        Segundo a Prefeitura municipal, mensalmente, s&amp;atilde;o oferecidas quatro mil vagas para mamografia, mas
+        somente 2.500 s&amp;atilde;o utilizadas.&lt;/p&gt;
+    </conteudotexto>
+    <dtpublicacao>2012-07-11T14:55:00</dtpublicacao>
+    <manchete>false</manchete>
+    <capa>false</capa>
+    <ordem xsi:nil="true"/>
+    <disponivel>true</disponivel>
+    <usuario_criador xsi:nil="true"/>
+    <dtcriado>2012-11-07T14:55:42</dtcriado>
+    <usuario_modificou xsi:nil="true"/>
+    <dtmodificado xsi:nil="true"/>
+    <conteditorias>Dicas de Saúde</conteditorias>
+    <conteudosanexos>~/content/arquivos/conteudo/168_infor.jpg</conteudosanexos>
+</conteudoXml>

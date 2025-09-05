@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<conteudoXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>63</id>
+    <tipo_id>15</tipo_id>
+    <titulo>Escola de Motorista</titulo>
+    <secao>Escola de Motorista</secao>
+    <sinopse>Escola de Motorista</sinopse>
+    <tags>grande londrina,transporte urbano</tags>
+    <conteudotexto>&lt;p&gt;&lt;img alt="" src="../../../content/imgsite/imagem_escola_motoristas.jpg" height="245"
+        width="962" /&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Projeto em atividade h&amp;aacute; mais de 30 anos&lt;/strong&gt;, a &lt;strong&gt;Escola
+        de Motorista&lt;/strong&gt; &amp;eacute; direcionada a colaboradores interessados na forma&amp;ccedil;&amp;atilde;o
+        de motoristas de &amp;ocirc;nibus. O objetivo da Escola &amp;eacute; incentivar o crescimento dentro da empresa.&lt;/p&gt;
+    </conteudotexto>
+    <dtpublicacao>2012-11-24T18:27:00</dtpublicacao>
+    <manchete>false</manchete>
+    <capa>false</capa>
+    <ordem xsi:nil="true"/>
+    <disponivel>true</disponivel>
+    <usuario_criador xsi:nil="true"/>
+    <dtcriado>2012-11-24T18:27:14</dtcriado>
+    <usuario_modificou xsi:nil="true"/>
+    <dtmodificado xsi:nil="true"/>
+    <conteditorias>Escola de motoristas</conteditorias>
+    <conteudosanexos>~/content/arquivos/conteudo/182_projetos.jpg</conteudosanexos>
+</conteudoXml>

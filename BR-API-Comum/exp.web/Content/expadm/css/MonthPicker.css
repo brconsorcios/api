@@ -1,0 +1,274 @@
+/*
+
+The jQuery UI Month Picker Version 2.2
+
+https://github.com/KidSysco/jquery-ui-month-picker/
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation;
+version 3.0. This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, visit
+http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.
+*/
+
+.month-picker {
+    width: 200px;
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    /*}
+    
+    .ui-datepicker {*/
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #fafafa;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+
+    border-bottom-color: #d5d5d5;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-color: #d5d5d5;
+    border-top-style: solid;
+    border-top-width: 1px;
+
+    border-left-color: #d5d5d5;
+    border-left-style: solid;
+    border-left-width: 1px;
+
+    border-right-color: #d5d5d5;
+    border-right-style: solid;
+    border-right-width: 1px;
+
+
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #d5d5d5;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #d5d5d5;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+
+    margin-top: 1px;
+    padding-bottom: 0;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    padding-top: 0.2em;
+    width: 17em;
+    /*}
+    .ui-corner-all {*/
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.month-picker td .ui-state-default {
+    border: none !important;
+    padding: 4px;
+}
+
+
+.month-picker .ui-button {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-text-decoration-color: -moz-use-text-color !important;
+    -moz-text-decoration-line: none !important;
+    -moz-text-decoration-style: solid !important;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: none;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: medium;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: -moz-use-text-color;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: none;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: medium;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.1em;
+    overflow-x: visible;
+    overflow-y: visible;
+    /*padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;*/
+    position: relative;
+    text-align: center;
+}
+
+
+.month-year-input {
+    width: 60px;
+}
+
+.month-picker .year-container-all {
+    cursor: pointer;
+}
+
+.month-picker-month-table {
+    margin-top: 8px;
+}
+
+.month-picker-year-table .year-container-all {
+    text-align: center;
+}
+
+.month-picker-year-table .year-title, .month-picker-year-table .year-container {
+    float: left;
+    display: inline-block;
+}
+
+.month-picker-year-table .year-title {
+    margin-left: 20px;
+    font-size: 12px;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.month-picker-year-table .year {
+    margin-right: 15px;
+    font-size: 12px;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.month-picker-year-table .year-container {
+    width: 50px;
+}
+
+.month-picker-year-table .previous-year {
+    width: 35px;
+}
+
+.month-picker-year-table .next-year {
+    width: 35px;
+    text-align: right;
+}
+
+.month-picker-year-table button {
+    width: 1.8em;
+    height: 1.8em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.month-picker-year-table .year-container {
+    text-align: center;
+}
+
+.month-picker-month-table td {
+    height: 35px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.month-picker-open-button {
+    height: 20px;
+    width: 20px;
+    vertical-align: bottom;
+}
+
+.month-picker-invalid-message {
+    display: none;
+    background-color: Yellow;
+}
+
+.month-picker-disabled {
+    background-color: #e1e1e1;
+}
+
+
+.ui-widget-header {
+    /*.ui-datepicker-header {*/
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../images/leftNavBg.png");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    background-size: auto auto;
+    border-bottom-color: #e7e7e7;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #e7e7e7;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-left-style-value: solid;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-left-width-value: 1px;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #e7e7e7;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-right-style-value: solid;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-right-width-value: 1px;
+    border-top-color: #e7e7e7;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-bottom: 0.2em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.2em;
+    position: relative;
+}

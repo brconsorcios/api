@@ -1,0 +1,1844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD972998-77DD-4024-8436-DC7B32DAEF3B}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>exp.web</RootNamespace>
+    <AssemblyName>exp.web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActionMailer.Net, Version=0.7.4.0, Culture=neutral, PublicKeyToken=e62db3114c02a1c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\ActionMailer.0.7.4\lib\Net40\ActionMailer.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActionMailer.Net.Mvc, Version=0.7.4.0, Culture=neutral, PublicKeyToken=e62db3114c02a1c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\ActionMailer.0.7.4\lib\Net40\ActionMailer.Net.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="C5, Version=1.1.0.0, Culture=neutral, PublicKeyToken=06a1b38866503b69, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExpertuMySqlFrameWork40.1.0.0\lib\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net40\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MimeTypeMap, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediaTypeMap.2.1.0.0\lib\net40\MimeTypeMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>Dlls\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity">
+      <HintPath>Dlls\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenScraping, Version=0.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenScraping.0.0.5\lib\net40\OpenScraping.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Quartz, Version=2.6.0.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Quartz.2.6.0\lib\net40\Quartz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.9.3.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.9.3\lib\net40\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RollbarSharp">
+      <HintPath>..\packages\RollbarSharp.0.3.3.0\lib\net40\RollbarSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <HintPath>..\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivator, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAPI.OutputCache">
+      <HintPath>..\packages\Strathweb.CacheOutput.0.5\lib\net40\WebAPI.OutputCache.dll</HintPath>
+    </Reference>
+    <Reference Include="WebApi.OutputCache.Core">
+      <HintPath>..\packages\Strathweb.CacheOutput.0.5\lib\net40\WebApi.OutputCache.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodePagCosorcio\PagConsorcio.cs" />
+    <Compile Include="Code\AcessoWebApiExpertu.cs" />
+    <Compile Include="Code\AcessoWebService.cs" />
+    <Compile Include="Code\Alerts.cs" />
+    <Compile Include="Code\AllowCrossSiteJson.cs" />
+    <Compile Include="Code\AllowCrossSiteJsonAttribute.cs" />
+    <Compile Include="Code\ElmahApiExceptionFilterAttribute.cs" />
+    <Compile Include="Code\ChaveIDs.cs" />
+    <Compile Include="Code\ContentBuilder.cs" />
+    <Compile Include="Code\Boleto2Via.cs" />
+    <Compile Include="Code\CorsHandler.cs" />
+    <Compile Include="Code\GerarParceiroPdf.cs" />
+    <Compile Include="Code\Helpers\IndicacoesHelpers.cs" />
+    <Compile Include="Code\GerarBoletoPdf.cs" />
+    <Compile Include="Code\GerarContratoPdf.cs" />
+    <Compile Include="Code\GerarPropostaPdf.cs" />
+    <Compile Include="Code\EditarImagem.cs" />
+    <Compile Include="Code\FeatureService.cs" />
+    <Compile Include="Code\LinkBuilder.cs" />
+    <Compile Include="Code\Logs.cs" />
+    <Compile Include="Code\PropostaNova.cs" />
+    <Compile Include="Code\RazorViewToString.cs" />
+    <Compile Include="Code\RollbarExceptionFilter.cs" />
+    <Compile Include="Code\SendEmails.cs" />
+    <Compile Include="Code\SendEmailBg.cs" />
+    <Compile Include="Code\SiteSettings.cs" />
+    <Compile Include="Code\UserHelper.cs" />
+    <Compile Include="Code\UserInfo.cs" />
+    <Compile Include="Code\UserWebApiHelper.cs" />
+    <Content Include="Content\arquivos\loteria\federal.json" />
+    <Compile Include="Controllers\2ViaBoletos\IdenticarGrupoCotaBoletoController.cs" />
+    <Compile Include="Controllers\2ViaBoletos\ParcelaComTaxasBoletoController.cs" />
+    <Compile Include="Controllers\2ViaBoletos\antigo\EmitirBoleto2ViaController.cs" />
+    <Compile Include="Controllers\2ViaBoletos\SelecionarParcelasBoletosController.cs" />
+    <Compile Include="Controllers\Cadastro\BuscaCidadeController.cs" />
+    <Compile Include="Controllers\Cadastro\BuscaCidadeListaController.cs" />
+    <Compile Include="Controllers\Cadastro\BuscaProfissoesController.cs" />
+    <Compile Include="Controllers\Cadastro\ClienteCotasController.cs" />
+    <Compile Include="Controllers\Cadastro\BuscaCepController.cs" />
+    <Compile Include="Controllers\Contratos\ContratosController.cs" />
+    <Compile Include="Controllers\Newsletter\NewsletterController.cs" />
+    <Compile Include="Controllers\2ViaBoletos\EmitirBoletoSegundaViaController.cs" />
+    <Compile Include="Controllers\2ViaBoletos\antigo\GerarBoletoDoMesController.cs" />
+    <Compile Include="Controllers\2ViaBoletos\antigo\GerarBoletoPorParcelaController.cs" />
+    <Compile Include="Controllers\2ViaBoletos\antigo\GeraBoletosEmAtrasoController.cs" />
+    <Compile Include="Controllers\Imagens\imagemController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Code\CustomPrincipal.cs" />
+    <Compile Include="Models\stcRelListaPrecoVenda.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Template\Models\PropostaParceriaPdfModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="App_Data\ElmahErrors\dummy.txt" />
+    <Content Include="Content\imagens\icones\tipo22.png" />
+    <Content Include="Content\imagens\icones\tipo23.png" />
+    <Content Include="Content\imagens\icones\tipo24.png" />
+    <Content Include="Content\imagens\icones\tipo25.png" />
+    <Content Include="Content\imagens\icones\tipo26.png" />
+    <Content Include="Content\logosemails\0.png" />
+    <Content Include="Content\logosemails\1-orig.png" />
+    <Content Include="Content\logosemails\1.png" />
+    <Content Include="Content\logosemails\11.png" />
+    <Content Include="Content\logosemails\12.png" />
+    <Content Include="Content\logosemails\13.png" />
+    <Content Include="Content\logosemails\2-orig.png" />
+    <Content Include="Content\logosemails\2.png" />
+    <Content Include="Content\logosemails\5.png" />
+    <Content Include="Content\logosemails\6.png" />
+    <Content Include="Content\logosemails\7.png" />
+    <Content Include="Content\logosemails\8.png" />
+    <Content Include="Content\logosparceria\12.png" />
+    <Content Include="Content\logs\paceiro_POST_LOG_1.txt" />
+    <Content Include="Content\restrito\css\br.css" />
+    <Content Include="Content\arquivos\bens\9217_bem1.jpg" />
+    <Content Include="Content\arquivos\empresa\14_empresa.png" />
+    <Content Include="Content\bootstrap\assets\css\docs.css" />
+    <Content Include="Content\bootstrap\assets\css\pygments-manni.css" />
+    <Content Include="Content\bootstrap\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Content\bootstrap\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Content\bootstrap\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Content\bootstrap\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Content\bootstrap\assets\ico\favicon.png" />
+    <Content Include="Content\bootstrap\assets\js\application.js" />
+    <Content Include="Content\bootstrap\assets\js\customizer.js" />
+    <Content Include="Content\bootstrap\assets\js\filesaver.js" />
+    <Content Include="Content\bootstrap\assets\js\holder.js" />
+    <Content Include="Content\bootstrap\assets\js\html5shiv.js" />
+    <Content Include="Content\bootstrap\assets\js\jquery.js" />
+    <Content Include="Content\bootstrap\assets\js\jszip.js" />
+    <Content Include="Content\bootstrap\assets\js\less.js" />
+    <Content Include="Content\bootstrap\assets\js\raw-files.js" />
+    <Content Include="Content\bootstrap\assets\js\respond.min.js" />
+    <Content Include="Content\bootstrap\assets\js\uglify.js" />
+    <Content Include="Content\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Content\expadm\css\colorpicker.css" />
+    <Content Include="Content\expadm\css\dataTable.css" />
+    <Content Include="Content\expadm\css\elfinder.css" />
+    <Content Include="Content\expadm\css\fullcalendar.css" />
+    <Content Include="Content\expadm\css\icons.css" />
+    <Content Include="Content\expadm\css\main.css" />
+    <Content Include="Content\expadm\css\MonthPicker.css" />
+    <Content Include="Content\expadm\css\prettyPhoto.css" />
+    <Content Include="Content\expadm\css\reset.css" />
+    <Content Include="Content\expadm\css\sortable.css" />
+    <Content Include="Content\expadm\css\ui-timepicker-addon.css" />
+    <Content Include="Content\expadm\css\ui_custom.css" />
+    <Content Include="Content\expadm\css\wysiwyg.css" />
+    <Content Include="Content\expadm\images\add.png" />
+    <Content Include="Content\expadm\images\addFiles.png" />
+    <Content Include="Content\expadm\images\aInactive.png" />
+    <Content Include="Content\expadm\images\alertOpacityOverlay.png" />
+    <Content Include="Content\expadm\images\aNormal.png" />
+    <Content Include="Content\expadm\images\arrow.gif" />
+    <Content Include="Content\expadm\images\avatar.png" />
+    <Content Include="Content\expadm\images\big.png" />
+    <Content Include="Content\expadm\images\bodyBg.jpg" />
+    <Content Include="Content\expadm\images\botArrow.png" />
+    <Content Include="Content\expadm\images\calActiveBg.png" />
+    <Content Include="Content\expadm\images\Chevron.gif" />
+    <Content Include="Content\expadm\images\ChevronOverlay.png" />
+    <Content Include="Content\expadm\images\chosenSelect.png" />
+    <Content Include="Content\expadm\images\color.png" />
+    <Content Include="Content\expadm\images\colorPicker\blank.gif" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_background.png" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_hex.png" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_hsb_b.png" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_hsb_h.png" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_hsb_s.png" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_indic.gif" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_overlay.png" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_rgb_b.png" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_rgb_g.png" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_rgb_r.png" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_select.gif" />
+    <Content Include="Content\expadm\images\colorPicker\colorpicker_submit.png" />
+    <Content Include="Content\expadm\images\colorPicker\custom_background.png" />
+    <Content Include="Content\expadm\images\colorPicker\custom_hex.png" />
+    <Content Include="Content\expadm\images\colorPicker\custom_hsb_b.png" />
+    <Content Include="Content\expadm\images\colorPicker\custom_hsb_h.png" />
+    <Content Include="Content\expadm\images\colorPicker\custom_hsb_s.png" />
+    <Content Include="Content\expadm\images\colorPicker\custom_indic.gif" />
+    <Content Include="Content\expadm\images\colorPicker\custom_rgb_b.png" />
+    <Content Include="Content\expadm\images\colorPicker\custom_rgb_g.png" />
+    <Content Include="Content\expadm\images\colorPicker\custom_rgb_r.png" />
+    <Content Include="Content\expadm\images\colorPicker\custom_submit.png" />
+    <Content Include="Content\expadm\images\colorPicker\select.png" />
+    <Content Include="Content\expadm\images\colorPicker\select2.png" />
+    <Content Include="Content\expadm\images\colorPicker\slider.png" />
+    <Content Include="Content\expadm\images\count\blue.png" />
+    <Content Include="Content\expadm\images\count\green.png" />
+    <Content Include="Content\expadm\images\count\red.png" />
+    <Content Include="Content\expadm\images\darkBg.jpg" />
+    <Content Include="Content\expadm\images\dashed.png" />
+    <Content Include="Content\expadm\images\delete.png" />
+    <Content Include="Content\expadm\images\edit.png" />
+    <Content Include="Content\expadm\images\email.png" />
+    <Content Include="Content\expadm\images\error.png" />
+    <Content Include="Content\expadm\images\explogo.png" />
+    <Content Include="Content\expadm\images\fileManager\icons-big.png" />
+    <Content Include="Content\expadm\images\fileManager\icons-small.png" />
+    <Content Include="Content\expadm\images\fileManager\ql.png" />
+    <Content Include="Content\expadm\images\fileManager\spinner.gif" />
+    <Content Include="Content\expadm\images\fileManager\toolbar.png" />
+    <Content Include="Content\expadm\images\forms\checkbox.png" />
+    <Content Include="Content\expadm\images\forms\radio.png" />
+    <Content Include="Content\expadm\images\forms\select_left.png" />
+    <Content Include="Content\expadm\images\forms\select_left_datatable.png" />
+    <Content Include="Content\expadm\images\forms\select_right.png" />
+    <Content Include="Content\expadm\images\forms\select_right_datatable.png" />
+    <Content Include="Content\expadm\images\forms\spinnerBg.png" />
+    <Content Include="Content\expadm\images\forms\spinnerBottom.png" />
+    <Content Include="Content\expadm\images\forms\spinnerTop.png" />
+    <Content Include="Content\expadm\images\hover.png" />
+    <Content Include="Content\expadm\images\IconHome.gif" />
+    <Content Include="Content\expadm\images\icons\closeSelection.png" />
+    <Content Include="Content\expadm\images\icons\color\address-book-open.png" />
+    <Content Include="Content\expadm\images\icons\color\address-book.png" />
+    <Content Include="Content\expadm\images\icons\color\android.png" />
+    <Content Include="Content\expadm\images\icons\color\application-plus-black.png" />
+    <Content Include="Content\expadm\images\icons\color\application-plus.png" />
+    <Content Include="Content\expadm\images\icons\color\application-split-tile.png" />
+    <Content Include="Content\expadm\images\icons\color\application.png" />
+    <Content Include="Content\expadm\images\icons\color\arrow-circle-double.png" />
+    <Content Include="Content\expadm\images\icons\color\arrow-circle.png" />
+    <Content Include="Content\expadm\images\icons\color\arrow-curve-090.png" />
+    <Content Include="Content\expadm\images\icons\color\arrow-curve-180.png" />
+    <Content Include="Content\expadm\images\icons\color\arrow-curve-270.png" />
+    <Content Include="Content\expadm\images\icons\color\arrow-curve.png" />
+    <Content Include="Content\expadm\images\icons\color\arrow-in-out.png" />
+    <Content Include="Content\expadm\images\icons\color\arrow-in.png" />
+    <Content Include="Content\expadm\images\icons\color\arrow-resize-045.png" />
+    <Content Include="Content\expadm\images\icons\color\auction-hammer.png" />
+    <Content Include="Content\expadm\images\icons\color\baggage-cart-box.png" />
+    <Content Include="Content\expadm\images\icons\color\balloon-ellipsis.png" />
+    <Content Include="Content\expadm\images\icons\color\bank.png" />
+    <Content Include="Content\expadm\images\icons\color\barcode-2d.png" />
+    <Content Include="Content\expadm\images\icons\color\battery-full.png" />
+    <Content Include="Content\expadm\images\icons\color\bell.png" />
+    <Content Include="Content\expadm\images\icons\color\binocular.png" />
+    <Content Include="Content\expadm\images\icons\color\block.png" />
+    <Content Include="Content\expadm\images\icons\color\blog.png" />
+    <Content Include="Content\expadm\images\icons\color\blue-document-access.png" />
+    <Content Include="Content\expadm\images\icons\color\blue-document-excel.png" />
+    <Content Include="Content\expadm\images\icons\color\blue-document-flash-movie.png" />
+    <Content Include="Content\expadm\images\icons\color\blue-document-illustrator.png" />
+    <Content Include="Content\expadm\images\icons\color\blue-document-number.png" />
+    <Content Include="Content\expadm\images\icons\color\blue-document-pdf-text.png" />
+    <Content Include="Content\expadm\images\icons\color\blue-document-photoshop-image.png" />
+    <Content Include="Content\expadm\images\icons\color\blue-document-powerpoint.png" />
+    <Content Include="Content\expadm\images\icons\color\book-brown.png" />
+    <Content Include="Content\expadm\images\icons\color\book-open.png" />
+    <Content Include="Content\expadm\images\icons\color\box-document.png" />
+    <Content Include="Content\expadm\images\icons\color\briefcase.png" />
+    <Content Include="Content\expadm\images\icons\color\calendar-day.png" />
+    <Content Include="Content\expadm\images\icons\color\calendar-list.png" />
+    <Content Include="Content\expadm\images\icons\color\calendar-month.png" />
+    <Content Include="Content\expadm\images\icons\color\calendar-task.png" />
+    <Content Include="Content\expadm\images\icons\color\cards-address.png" />
+    <Content Include="Content\expadm\images\icons\color\category.png" />
+    <Content Include="Content\expadm\images\icons\color\chain.png" />
+    <Content Include="Content\expadm\images\icons\color\chart-pie-separate.png" />
+    <Content Include="Content\expadm\images\icons\color\chart.png" />
+    <Content Include="Content\expadm\images\icons\color\chevron-expand.png" />
+    <Content Include="Content\expadm\images\icons\color\chevron.png" />
+    <Content Include="Content\expadm\images\icons\color\color-swatches.png" />
+    <Content Include="Content\expadm\images\icons\color\contrast.png" />
+    <Content Include="Content\expadm\images\icons\color\cross.png" />
+    <Content Include="Content\expadm\images\icons\color\currency.png" />
+    <Content Include="Content\expadm\images\icons\color\cursor.png" />
+    <Content Include="Content\expadm\images\icons\color\database.png" />
+    <Content Include="Content\expadm\images\icons\color\databases.png" />
+    <Content Include="Content\expadm\images\icons\color\disc.png" />
+    <Content Include="Content\expadm\images\icons\color\disk-return-black.png" />
+    <Content Include="Content\expadm\images\icons\color\document-access.png" />
+    <Content Include="Content\expadm\images\icons\color\document-excel.png" />
+    <Content Include="Content\expadm\images\icons\color\document-flash-movie.png" />
+    <Content Include="Content\expadm\images\icons\color\document-pdf-text.png" />
+    <Content Include="Content\expadm\images\icons\color\document-task.png" />
+    <Content Include="Content\expadm\images\icons\color\document-tree.png" />
+    <Content Include="Content\expadm\images\icons\color\document-word-text.png" />
+    <Content Include="Content\expadm\images\icons\color\document-zipper.png" />
+    <Content Include="Content\expadm\images\icons\color\drive-disc.png" />
+    <Content Include="Content\expadm\images\icons\color\edit-column.png" />
+    <Content Include="Content\expadm\images\icons\color\exclamation.png" />
+    <Content Include="Content\expadm\images\icons\color\external.png" />
+    <Content Include="Content\expadm\images\icons\color\feed.png" />
+    <Content Include="Content\expadm\images\icons\color\film.png" />
+    <Content Include="Content\expadm\images\icons\color\flask.png" />
+    <Content Include="Content\expadm\images\icons\color\game.png" />
+    <Content Include="Content\expadm\images\icons\color\grid.png" />
+    <Content Include="Content\expadm\images\icons\color\guide.png" />
+    <Content Include="Content\expadm\images\icons\color\hammer.png" />
+    <Content Include="Content\expadm\images\icons\color\hand-point-090.png" />
+    <Content Include="Content\expadm\images\icons\color\hand-point.png" />
+    <Content Include="Content\expadm\images\icons\color\home.png" />
+    <Content Include="Content\expadm\images\icons\color\hourglass.png" />
+    <Content Include="Content\expadm\images\icons\color\image-crop.png" />
+    <Content Include="Content\expadm\images\icons\color\image-resize-actual.png" />
+    <Content Include="Content\expadm\images\icons\color\image-resize.png" />
+    <Content Include="Content\expadm\images\icons\color\information.png" />
+    <Content Include="Content\expadm\images\icons\color\layer-resize.png" />
+    <Content Include="Content\expadm\images\icons\color\layer-vector.png" />
+    <Content Include="Content\expadm\images\icons\color\layers-ungroup.png" />
+    <Content Include="Content\expadm\images\icons\color\layout-3-mix.png" />
+    <Content Include="Content\expadm\images\icons\color\layout-6.png" />
+    <Content Include="Content\expadm\images\icons\color\lifebuoy.png" />
+    <Content Include="Content\expadm\images\icons\color\mail.png" />
+    <Content Include="Content\expadm\images\icons\color\minus-circle.png" />
+    <Content Include="Content\expadm\images\icons\color\money.png" />
+    <Content Include="Content\expadm\images\icons\color\monitor-window.png" />
+    <Content Include="Content\expadm\images\icons\color\monitor.png" />
+    <Content Include="Content\expadm\images\icons\color\music-beam.png" />
+    <Content Include="Content\expadm\images\icons\color\node-select.png" />
+    <Content Include="Content\expadm\images\icons\color\notebook.png" />
+    <Content Include="Content\expadm\images\icons\color\paint-brush.png" />
+    <Content Include="Content\expadm\images\icons\color\paint-can.png" />
+    <Content Include="Content\expadm\images\icons\color\palette.png" />
+    <Content Include="Content\expadm\images\icons\color\paper-clip.png" />
+    <Content Include="Content\expadm\images\icons\color\pencil.png" />
+    <Content Include="Content\expadm\images\icons\color\pin.png" />
+    <Content Include="Content\expadm\images\icons\color\plus.png" />
+    <Content Include="Content\expadm\images\icons\color\present.png" />
+    <Content Include="Content\expadm\images\icons\color\projection-screen.png" />
+    <Content Include="Content\expadm\images\icons\color\question.png" />
+    <Content Include="Content\expadm\images\icons\color\report-paper.png" />
+    <Content Include="Content\expadm\images\icons\color\ruler.png" />
+    <Content Include="Content\expadm\images\icons\color\scissors.png" />
+    <Content Include="Content\expadm\images\icons\color\selection-input.png" />
+    <Content Include="Content\expadm\images\icons\color\shopping-basket.png" />
+    <Content Include="Content\expadm\images\icons\color\sitemap.png" />
+    <Content Include="Content\expadm\images\icons\color\speaker-volume.png" />
+    <Content Include="Content\expadm\images\icons\color\spectrum.png" />
+    <Content Include="Content\expadm\images\icons\color\star.png" />
+    <Content Include="Content\expadm\images\icons\color\store.png" />
+    <Content Include="Content\expadm\images\icons\color\switch.png" />
+    <Content Include="Content\expadm\images\icons\color\television.png" />
+    <Content Include="Content\expadm\images\icons\color\thumb-up.png" />
+    <Content Include="Content\expadm\images\icons\color\thumb.png" />
+    <Content Include="Content\expadm\images\icons\color\tick.png" />
+    <Content Include="Content\expadm\images\icons\color\toolbox.png" />
+    <Content Include="Content\expadm\images\icons\color\trophy.png" />
+    <Content Include="Content\expadm\images\icons\color\ui-color-picker-transparent.png" />
+    <Content Include="Content\expadm\images\icons\color\ui-slider-vertical-050.png" />
+    <Content Include="Content\expadm\images\icons\color\ui-slider.png" />
+    <Content Include="Content\expadm\images\icons\color\user-black-female.png" />
+    <Content Include="Content\expadm\images\icons\color\user-black.png" />
+    <Content Include="Content\expadm\images\icons\color\user-silhouette-question.png" />
+    <Content Include="Content\expadm\images\icons\color\users.png" />
+    <Content Include="Content\expadm\images\icons\color\wand.png" />
+    <Content Include="Content\expadm\images\icons\color\wrench-screwdriver.png" />
+    <Content Include="Content\expadm\images\icons\dark\abacus.png" />
+    <Content Include="Content\expadm\images\icons\dark\add.png" />
+    <Content Include="Content\expadm\images\icons\dark\addressBook.png" />
+    <Content Include="Content\expadm\images\icons\dark\adminUser.png" />
+    <Content Include="Content\expadm\images\icons\dark\adminUser2.png" />
+    <Content Include="Content\expadm\images\icons\dark\airplane.png" />
+    <Content Include="Content\expadm\images\icons\dark\alarm.png" />
+    <Content Include="Content\expadm\images\icons\dark\alert.png" />
+    <Content Include="Content\expadm\images\icons\dark\alert2.png" />
+    <Content Include="Content\expadm\images\icons\dark\android.png" />
+    <Content Include="Content\expadm\images\icons\dark\archive.png" />
+    <Content Include="Content\expadm\images\icons\dark\arrowDown.png" />
+    <Content Include="Content\expadm\images\icons\dark\arrowLeft.png" />
+    <Content Include="Content\expadm\images\icons\dark\arrowRight.png" />
+    <Content Include="Content\expadm\images\icons\dark\arrowUp.png" />
+    <Content Include="Content\expadm\images\icons\dark\bag.png" />
+    <Content Include="Content\expadm\images\icons\dark\baloons.png" />
+    <Content Include="Content\expadm\images\icons\dark\bandaid.png" />
+    <Content Include="Content\expadm\images\icons\dark\basket.png" />
+    <Content Include="Content\expadm\images\icons\dark\basket2.png" />
+    <Content Include="Content\expadm\images\icons\dark\battery.png" />
+    <Content Include="Content\expadm\images\icons\dark\batteryFull.png" />
+    <Content Include="Content\expadm\images\icons\dark\bell.png" />
+    <Content Include="Content\expadm\images\icons\dark\bell2.png" />
+    <Content Include="Content\expadm\images\icons\dark\bigBrush.png" />
+    <Content Include="Content\expadm\images\icons\dark\blackberry.png" />
+    <Content Include="Content\expadm\images\icons\dark\block.png" />
+    <Content Include="Content\expadm\images\icons\dark\blocks.png" />
+    <Content Include="Content\expadm\images\icons\dark\bluetooth.png" />
+    <Content Include="Content\expadm\images\icons\dark\bluetooth2.png" />
+    <Content Include="Content\expadm\images\icons\dark\bluray.png" />
+    <Content Include="Content\expadm\images\icons\dark\book.png" />
+    <Content Include="Content\expadm\images\icons\dark\bookLarge.png" />
+    <Content Include="Content\expadm\images\icons\dark\books.png" />
+    <Content Include="Content\expadm\images\icons\dark\bright.png" />
+    <Content Include="Content\expadm\images\icons\dark\bubbles.png" />
+    <Content Include="Content\expadm\images\icons\dark\bubbles2.png" />
+    <Content Include="Content\expadm\images\icons\dark\building.png" />
+    <Content Include="Content\expadm\images\icons\dark\bullsEye.png" />
+    <Content Include="Content\expadm\images\icons\dark\buzz.png" />
+    <Content Include="Content\expadm\images\icons\dark\calc.png" />
+    <Content Include="Content\expadm\images\icons\dark\camera.png" />
+    <Content Include="Content\expadm\images\icons\dark\camera2.png" />
+    <Content Include="Content\expadm\images\icons\dark\car.png" />
+    <Content Include="Content\expadm\images\icons\dark\cart.png" />
+    <Content Include="Content\expadm\images\icons\dark\cart2.png" />
+    <Content Include="Content\expadm\images\icons\dark\cart3.png" />
+    <Content Include="Content\expadm\images\icons\dark\cart4.png" />
+    <Content Include="Content\expadm\images\icons\dark\cashRegister.png" />
+    <Content Include="Content\expadm\images\icons\dark\cassette.png" />
+    <Content Include="Content\expadm\images\icons\dark\cat.png" />
+    <Content Include="Content\expadm\images\icons\dark\cd.png" />
+    <Content Include="Content\expadm\images\icons\dark\chair.png" />
+    <Content Include="Content\expadm\images\icons\dark\chart.png" />
+    <Content Include="Content\expadm\images\icons\dark\chart2.png" />
+    <Content Include="Content\expadm\images\icons\dark\chart3.png" />
+    <Content Include="Content\expadm\images\icons\dark\chart4.png" />
+    <Content Include="Content\expadm\images\icons\dark\chart5.png" />
+    <Content Include="Content\expadm\images\icons\dark\chart6.png" />
+    <Content Include="Content\expadm\images\icons\dark\chart7.png" />
+    <Content Include="Content\expadm\images\icons\dark\chart8.png" />
+    <Content Include="Content\expadm\images\icons\dark\check.png" />
+    <Content Include="Content\expadm\images\icons\dark\chemical.png" />
+    <Content Include="Content\expadm\images\icons\dark\chrome.png" />
+    <Content Include="Content\expadm\images\icons\dark\clipboard.png" />
+    <Content Include="Content\expadm\images\icons\dark\clock.png" />
+    <Content Include="Content\expadm\images\icons\dark\close.png" />
+    <Content Include="Content\expadm\images\icons\dark\cloud.png" />
+    <Content Include="Content\expadm\images\icons\dark\cloudDownload.png" />
+    <Content Include="Content\expadm\images\icons\dark\cloudUpload.png" />
+    <Content Include="Content\expadm\images\icons\dark\cog.png" />
+    <Content Include="Content\expadm\images\icons\dark\cog2.png" />
+    <Content Include="Content\expadm\images\icons\dark\cog3.png" />
+    <Content Include="Content\expadm\images\icons\dark\cog4.png" />
+    <Content Include="Content\expadm\images\icons\dark\companies.png" />
+    <Content Include="Content\expadm\images\icons\dark\computer.png" />
+    <Content Include="Content\expadm\images\icons\dark\coverflow.png" />
+    <Content Include="Content\expadm\images\icons\dark\create.png" />
+    <Content Include="Content\expadm\images\icons\dark\cup.png" />
+    <Content Include="Content\expadm\images\icons\dark\cut.png" />
+    <Content Include="Content\expadm\images\icons\dark\dayCalendar.png" />
+    <Content Include="Content\expadm\images\icons\dark\delicious.png" />
+    <Content Include="Content\expadm\images\icons\dark\denied.png" />
+    <Content Include="Content\expadm\images\icons\dark\dialog.png" />
+    <Content Include="Content\expadm\images\icons\dark\digg.png" />
+    <Content Include="Content\expadm\images\icons\dark\digg2.png" />
+    <Content Include="Content\expadm\images\icons\dark\doc.png" />
+    <Content Include="Content\expadm\images\icons\dark\docs.png" />
+    <Content Include="Content\expadm\images\icons\dark\download.png" />
+    <Content Include="Content\expadm\images\icons\dark\download2.png" />
+    <Content Include="Content\expadm\images\icons\dark\download3.png" />
+    <Content Include="Content\expadm\images\icons\dark\dribbble.png" />
+    <Content Include="Content\expadm\images\icons\dark\dribbble2.png" />
+    <Content Include="Content\expadm\images\icons\dark\drive.png" />
+    <Content Include="Content\expadm\images\icons\dark\dropbox.png" />
+    <Content Include="Content\expadm\images\icons\dark\dropper.png" />
+    <Content Include="Content\expadm\images\icons\dark\drupal.png" />
+    <Content Include="Content\expadm\images\icons\dark\dvd.png" />
+    <Content Include="Content\expadm\images\icons\dark\electricity.png" />
+    <Content Include="Content\expadm\images\icons\dark\electroPlug.png" />
+    <Content Include="Content\expadm\images\icons\dark\excelDoc.png" />
+    <Content Include="Content\expadm\images\icons\dark\exit.png" />
+    <Content Include="Content\expadm\images\icons\dark\expengine.png" />
+    <Content Include="Content\expadm\images\icons\dark\expose.png" />
+    <Content Include="Content\expadm\images\icons\dark\facebook.png" />
+    <Content Include="Content\expadm\images\icons\dark\fax.png" />
+    <Content Include="Content\expadm\images\icons\dark\femaleContour.png" />
+    <Content Include="Content\expadm\images\icons\dark\femaleSymbol.png" />
+    <Content Include="Content\expadm\images\icons\dark\files.png" />
+    <Content Include="Content\expadm\images\icons\dark\filmCamera.png" />
+    <Content Include="Content\expadm\images\icons\dark\filmStrip.png" />
+    <Content Include="Content\expadm\images\icons\dark\filmStrip2.png" />
+    <Content Include="Content\expadm\images\icons\dark\firefox.png" />
+    <Content Include="Content\expadm\images\icons\dark\flag.png" />
+    <Content Include="Content\expadm\images\icons\dark\flag2.png" />
+    <Content Include="Content\expadm\images\icons\dark\flagFinished.png" />
+    <Content Include="Content\expadm\images\icons\dark\folder.png" />
+    <Content Include="Content\expadm\images\icons\dark\footprints.png" />
+    <Content Include="Content\expadm\images\icons\dark\fountainPen.png" />
+    <Content Include="Content\expadm\images\icons\dark\frames.png" />
+    <Content Include="Content\expadm\images\icons\dark\full.png" />
+    <Content Include="Content\expadm\images\icons\dark\full2.png" />
+    <Content Include="Content\expadm\images\icons\dark\fullscreen.png" />
+    <Content Include="Content\expadm\images\icons\dark\globe.png" />
+    <Content Include="Content\expadm\images\icons\dark\globe2.png" />
+    <Content Include="Content\expadm\images\icons\dark\gmaps.png" />
+    <Content Include="Content\expadm\images\icons\dark\goBack.png" />
+    <Content Include="Content\expadm\images\icons\dark\goFull.png" />
+    <Content Include="Content\expadm\images\icons\dark\graph.png" />
+    <Content Include="Content\expadm\images\icons\dark\hd.png" />
+    <Content Include="Content\expadm\images\icons\dark\hd2.png" />
+    <Content Include="Content\expadm\images\icons\dark\hd3.png" />
+    <Content Include="Content\expadm\images\icons\dark\headphones.png" />
+    <Content Include="Content\expadm\images\icons\dark\heart.png" />
+    <Content Include="Content\expadm\images\icons\dark\help.png" />
+    <Content Include="Content\expadm\images\icons\dark\home.png" />
+    <Content Include="Content\expadm\images\icons\dark\home2.png" />
+    <Content Include="Content\expadm\images\icons\dark\icecream.png" />
+    <Content Include="Content\expadm\images\icons\dark\ichat.png" />
+    <Content Include="Content\expadm\images\icons\dark\image.png" />
+    <Content Include="Content\expadm\images\icons\dark\image2.png" />
+    <Content Include="Content\expadm\images\icons\dark\imageList.png" />
+    <Content Include="Content\expadm\images\icons\dark\images.png" />
+    <Content Include="Content\expadm\images\icons\dark\images2.png" />
+    <Content Include="Content\expadm\images\icons\dark\imagesList.png" />
+    <Content Include="Content\expadm\images\icons\dark\inbox.png" />
+    <Content Include="Content\expadm\images\icons\dark\inbox2.png" />
+    <Content Include="Content\expadm\images\icons\dark\incoming.png" />
+    <Content Include="Content\expadm\images\icons\dark\info.png" />
+    <Content Include="Content\expadm\images\icons\dark\ipad.png" />
+    <Content Include="Content\expadm\images\icons\dark\iphone.png" />
+    <Content Include="Content\expadm\images\icons\dark\ipodClassic.png" />
+    <Content Include="Content\expadm\images\icons\dark\ipodNano.png" />
+    <Content Include="Content\expadm\images\icons\dark\joomla.png" />
+    <Content Include="Content\expadm\images\icons\dark\key.png" />
+    <Content Include="Content\expadm\images\icons\dark\ladyPurse.png" />
+    <Content Include="Content\expadm\images\icons\dark\lamp.png" />
+    <Content Include="Content\expadm\images\icons\dark\laptop.png" />
+    <Content Include="Content\expadm\images\icons\dark\lastFM.png" />
+    <Content Include="Content\expadm\images\icons\dark\lemonadeStand.png" />
+    <Content Include="Content\expadm\images\icons\dark\lightBulb.png" />
+    <Content Include="Content\expadm\images\icons\dark\like.png" />
+    <Content Include="Content\expadm\images\icons\dark\link.png" />
+    <Content Include="Content\expadm\images\icons\dark\link2.png" />
+    <Content Include="Content\expadm\images\icons\dark\linux.png" />
+    <Content Include="Content\expadm\images\icons\dark\list.png" />
+    <Content Include="Content\expadm\images\icons\dark\loading.png" />
+    <Content Include="Content\expadm\images\icons\dark\locked.png" />
+    <Content Include="Content\expadm\images\icons\dark\locked2.png" />
+    <Content Include="Content\expadm\images\icons\dark\logoff.png" />
+    <Content Include="Content\expadm\images\icons\dark\macos.png" />
+    <Content Include="Content\expadm\images\icons\dark\magicMouse.png" />
+    <Content Include="Content\expadm\images\icons\dark\magnify.png" />
+    <Content Include="Content\expadm\images\icons\dark\mail.png" />
+    <Content Include="Content\expadm\images\icons\dark\maleContour.png" />
+    <Content Include="Content\expadm\images\icons\dark\maleSymbol.png" />
+    <Content Include="Content\expadm\images\icons\dark\map.png" />
+    <Content Include="Content\expadm\images\icons\dark\medicalCase.png" />
+    <Content Include="Content\expadm\images\icons\dark\megaphone.png" />
+    <Content Include="Content\expadm\images\icons\dark\microphone.png" />
+    <Content Include="Content\expadm\images\icons\dark\mightyMouse.png" />
+    <Content Include="Content\expadm\images\icons\dark\mobile.png" />
+    <Content Include="Content\expadm\images\icons\dark\mobyPicture.png" />
+    <Content Include="Content\expadm\images\icons\dark\money.png" />
+    <Content Include="Content\expadm\images\icons\dark\money2.png" />
+    <Content Include="Content\expadm\images\icons\dark\monitor.png" />
+    <Content Include="Content\expadm\images\icons\dark\monthCalendar.png" />
+    <Content Include="Content\expadm\images\icons\dark\mouse.png" />
+    <Content Include="Content\expadm\images\icons\dark\music.png" />
+    <Content Include="Content\expadm\images\icons\dark\myspace.png" />
+    <Content Include="Content\expadm\images\icons\dark\notebook.png" />
+    <Content Include="Content\expadm\images\icons\dark\outgoing.png" />
+    <Content Include="Content\expadm\images\icons\dark\pacman.png" />
+    <Content Include="Content\expadm\images\icons\dark\paintBrush.png" />
+    <Content Include="Content\expadm\images\icons\dark\pants.png" />
+    <Content Include="Content\expadm\images\icons\dark\paperclip.png" />
+    <Content Include="Content\expadm\images\icons\dark\paypal.png" />
+    <Content Include="Content\expadm\images\icons\dark\paypal2.png" />
+    <Content Include="Content\expadm\images\icons\dark\paypal3.png" />
+    <Content Include="Content\expadm\images\icons\dark\pdfDoc.png" />
+    <Content Include="Content\expadm\images\icons\dark\pencil.png" />
+    <Content Include="Content\expadm\images\icons\dark\phone.png" />
+    <Content Include="Content\expadm\images\icons\dark\phone2.png" />
+    <Content Include="Content\expadm\images\icons\dark\phone3.png" />
+    <Content Include="Content\expadm\images\icons\dark\photos.png" />
+    <Content Include="Content\expadm\images\icons\dark\piggyBank.png" />
+    <Content Include="Content\expadm\images\icons\dark\pin.png" />
+    <Content Include="Content\expadm\images\icons\dark\planeSuitcase.png" />
+    <Content Include="Content\expadm\images\icons\dark\play.png" />
+    <Content Include="Content\expadm\images\icons\dark\play2.png" />
+    <Content Include="Content\expadm\images\icons\dark\plixi.png" />
+    <Content Include="Content\expadm\images\icons\dark\podium.png" />
+    <Content Include="Content\expadm\images\icons\dark\postcard.png" />
+    <Content Include="Content\expadm\images\icons\dark\power.png" />
+    <Content Include="Content\expadm\images\icons\dark\powerBattery.png" />
+    <Content Include="Content\expadm\images\icons\dark\ppDoc.png" />
+    <Content Include="Content\expadm\images\icons\dark\presentation.png" />
+    <Content Include="Content\expadm\images\icons\dark\preview.png" />
+    <Content Include="Content\expadm\images\icons\dark\priceTag.png" />
+    <Content Include="Content\expadm\images\icons\dark\priceTags.png" />
+    <Content Include="Content\expadm\images\icons\dark\printer.png" />
+    <Content Include="Content\expadm\images\icons\dark\radio.png" />
+    <Content Include="Content\expadm\images\icons\dark\record.png" />
+    <Content Include="Content\expadm\images\icons\dark\recycle.png" />
+    <Content Include="Content\expadm\images\icons\dark\refresh.png" />
+    <Content Include="Content\expadm\images\icons\dark\refresh2.png" />
+    <Content Include="Content\expadm\images\icons\dark\refresh3.png" />
+    <Content Include="Content\expadm\images\icons\dark\refresh4.png" />
+    <Content Include="Content\expadm\images\icons\dark\repeat.png" />
+    <Content Include="Content\expadm\images\icons\dark\robot.png" />
+    <Content Include="Content\expadm\images\icons\dark\rss.png" />
+    <Content Include="Content\expadm\images\icons\dark\ruler.png" />
+    <Content Include="Content\expadm\images\icons\dark\ruler2.png" />
+    <Content Include="Content\expadm\images\icons\dark\runningMan.png" />
+    <Content Include="Content\expadm\images\icons\dark\safari.png" />
+    <Content Include="Content\expadm\images\icons\dark\scanLabel.png" />
+    <Content Include="Content\expadm\images\icons\dark\sd.png" />
+    <Content Include="Content\expadm\images\icons\dark\sd2.png" />
+    <Content Include="Content\expadm\images\icons\dark\sd3.png" />
+    <Content Include="Content\expadm\images\icons\dark\settings.png" />
+    <Content Include="Content\expadm\images\icons\dark\settings2.png" />
+    <Content Include="Content\expadm\images\icons\dark\shirt.png" />
+    <Content Include="Content\expadm\images\icons\dark\shoppingBag.png" />
+    <Content Include="Content\expadm\images\icons\dark\shuffle.png" />
+    <Content Include="Content\expadm\images\icons\dark\signal.png" />
+    <Content Include="Content\expadm\images\icons\dark\signPost.png" />
+    <Content Include="Content\expadm\images\icons\dark\skype.png" />
+    <Content Include="Content\expadm\images\icons\dark\smallBrush.png" />
+    <Content Include="Content\expadm\images\icons\dark\socks.png" />
+    <Content Include="Content\expadm\images\icons\dark\sound.png" />
+    <Content Include="Content\expadm\images\icons\dark\speech.png" />
+    <Content Include="Content\expadm\images\icons\dark\speech2.png" />
+    <Content Include="Content\expadm\images\icons\dark\star.png" />
+    <Content Include="Content\expadm\images\icons\dark\stats.png" />
+    <Content Include="Content\expadm\images\icons\dark\stop.png" />
+    <Content Include="Content\expadm\images\icons\dark\stopWatch.png" />
+    <Content Include="Content\expadm\images\icons\dark\strategy.png" />
+    <Content Include="Content\expadm\images\icons\dark\strategy2.png" />
+    <Content Include="Content\expadm\images\icons\dark\stumble.png" />
+    <Content Include="Content\expadm\images\icons\dark\suitcase.png" />
+    <Content Include="Content\expadm\images\icons\dark\switcher.png" />
+    <Content Include="Content\expadm\images\icons\dark\table.png" />
+    <Content Include="Content\expadm\images\icons\dark\tag.png" />
+    <Content Include="Content\expadm\images\icons\dark\tags.png" />
+    <Content Include="Content\expadm\images\icons\dark\timer.png" />
+    <Content Include="Content\expadm\images\icons\dark\transfer.png" />
+    <Content Include="Content\expadm\images\icons\dark\trash.png" />
+    <Content Include="Content\expadm\images\icons\dark\travelSuitcase.png" />
+    <Content Include="Content\expadm\images\icons\dark\tree.png" />
+    <Content Include="Content\expadm\images\icons\dark\trolly.png" />
+    <Content Include="Content\expadm\images\icons\dark\truck.png" />
+    <Content Include="Content\expadm\images\icons\dark\tumbler.png" />
+    <Content Include="Content\expadm\images\icons\dark\tv.png" />
+    <Content Include="Content\expadm\images\icons\dark\twitter.png" />
+    <Content Include="Content\expadm\images\icons\dark\twitter2.png" />
+    <Content Include="Content\expadm\images\icons\dark\umbrella.png" />
+    <Content Include="Content\expadm\images\icons\dark\underConstruction.png" />
+    <Content Include="Content\expadm\images\icons\dark\unlocked.png" />
+    <Content Include="Content\expadm\images\icons\dark\upload.png" />
+    <Content Include="Content\expadm\images\icons\dark\user.png" />
+    <Content Include="Content\expadm\images\icons\dark\user2.png" />
+    <Content Include="Content\expadm\images\icons\dark\userComment.png" />
+    <Content Include="Content\expadm\images\icons\dark\users.png" />
+    <Content Include="Content\expadm\images\icons\dark\users2.png" />
+    <Content Include="Content\expadm\images\icons\dark\vault.png" />
+    <Content Include="Content\expadm\images\icons\dark\vcard.png" />
+    <Content Include="Content\expadm\images\icons\dark\view.png" />
+    <Content Include="Content\expadm\images\icons\dark\vimeo.png" />
+    <Content Include="Content\expadm\images\icons\dark\vimeo2.png" />
+    <Content Include="Content\expadm\images\icons\dark\walkingMan.png" />
+    <Content Include="Content\expadm\images\icons\dark\wifi.png" />
+    <Content Include="Content\expadm\images\icons\dark\wifi2.png" />
+    <Content Include="Content\expadm\images\icons\dark\windows.png" />
+    <Content Include="Content\expadm\images\icons\dark\wordDoc.png" />
+    <Content Include="Content\expadm\images\icons\dark\wordpress.png" />
+    <Content Include="Content\expadm\images\icons\dark\wordpress2.png" />
+    <Content Include="Content\expadm\images\icons\dark\youtube.png" />
+    <Content Include="Content\expadm\images\icons\dark\zip.png" />
+    <Content Include="Content\expadm\images\icons\dark\zipFiles.png" />
+    <Content Include="Content\expadm\images\icons\lists\arrow2Blue.png" />
+    <Content Include="Content\expadm\images\icons\lists\arrow2Green.png" />
+    <Content Include="Content\expadm\images\icons\lists\arrow2Grey.png" />
+    <Content Include="Content\expadm\images\icons\lists\arrow2Red.png" />
+    <Content Include="Content\expadm\images\icons\lists\arrowBlue.png" />
+    <Content Include="Content\expadm\images\icons\lists\arrowGreen.png" />
+    <Content Include="Content\expadm\images\icons\lists\arrowGrey.png" />
+    <Content Include="Content\expadm\images\icons\lists\arrowRed.png" />
+    <Content Include="Content\expadm\images\icons\lists\plusBlue.png" />
+    <Content Include="Content\expadm\images\icons\lists\plusGreen.png" />
+    <Content Include="Content\expadm\images\icons\lists\plusGrey.png" />
+    <Content Include="Content\expadm\images\icons\lists\plusRed.png" />
+    <Content Include="Content\expadm\images\icons\lists\tipBlue.png" />
+    <Content Include="Content\expadm\images\icons\lists\tipGreen.png" />
+    <Content Include="Content\expadm\images\icons\lists\tipGrey.png" />
+    <Content Include="Content\expadm\images\icons\lists\tipRed.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\abacus.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\add.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\addressBook.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\adminUser.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\adminUser2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\airplane.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\alarm.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\alert.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\alert2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\android.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\archive.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\arrowDown.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\arrowLeft.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\arrowRight.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\arrowUp.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bag.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\balloons.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\baloons.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bandaid.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\basket.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\basket2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\battery.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\batteryFull.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bell.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bell2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bigBrush.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\blackberry.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\block.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\blocks.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bluetooth.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bluetooth2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bluray.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\book.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bookLarge.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\books.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bright.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bubbles.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bubbles2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\building.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\bullsEye.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\buzz.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\calc.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\camera.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\camera2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\car.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cart.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cart2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cart3.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cart4.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cashRegister.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cassette.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cat.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cd.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chair.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chart.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chart2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chart3.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chart4.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chart5.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chart6.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chart7.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chart8.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\check.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chemical.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\chrome.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\clipboard.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\clock.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\close.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cloud.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cloudDownload.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cloudUpload.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cog.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cog2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cog3.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cog4.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\companies.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\computer.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\coverflow.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\create.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cup.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\cut.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\dayCalendar.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\delicious.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\denied.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\dialog.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\digg.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\digg2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\doc.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\docs.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\download.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\download2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\download3.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\dribbble.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\dribbble2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\drive.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\dropbox.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\dropper.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\drupal.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\dvd.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\electricity.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\electroPlug.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\excelDoc.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\exit.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\expengine.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\expose.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\facebook.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\fax.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\femaleContour.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\femaleSymbol.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\files.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\filmStrip.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\filmStrip2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\fimlCamera.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\finishFlag.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\firefox.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\flag.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\flag2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\folder.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\footprints.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\fountainPen.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\frames.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\full.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\full2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\fullscreen.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\globe.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\globe2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\gmaps.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\goBack.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\goFull.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\graph.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\hd.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\hd2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\hd3.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\headphones.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\heart.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\help.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\home.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\home2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\icecream.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\ichat.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\image.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\image2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\imageList.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\images.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\images2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\imagesList.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\inbox.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\inbox2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\incoming.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\info.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\ipad.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\iphone.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\ipodClassic.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\ipodNano.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\joomla.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\key.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\ladyPurse.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\lamp.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\laptop.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\lastFM.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\lemonadeStand.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\lightBulb.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\like.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\link.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\link2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\linux.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\list.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\loading.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\locked.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\locked2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\logoff.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\macos.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\magicMouse.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\magnify.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\mail.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\maleContour.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\maleSymbol.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\map.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\medicalCase.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\megaphone.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\microphone.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\mightyMouse.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\mobile.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\mobyPicture.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\money.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\money2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\monitor.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\monthCalendar.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\mouse.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\music.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\myspace.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\notebook.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\outgoing.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\pacman.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\paintBrush.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\pants.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\paperclip.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\paypal.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\paypal2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\paypal3.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\pdfDoc.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\pencil.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\phone.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\phone2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\phone3.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\photos.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\piggyBank.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\pin.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\planeSuitcase.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\play.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\play2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\plixi.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\podium.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\postcard.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\power.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\ppDoc.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\presentation.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\preview.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\priceTag.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\priceTags.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\printer.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\radio.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\record.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\recycle.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\refresh.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\refresh2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\refresh3.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\refresh4.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\repeat.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\robot.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\rss.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\ruler.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\ruler2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\runningMan.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\safari.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\scanLabel.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\sd.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\sd2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\sd3.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\settings.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\settings2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\shirt.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\shoppingBag.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\shuffle.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\signal.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\signPost.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\skype.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\smallBrush.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\socks.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\sound.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\speech.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\speech2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\star.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\stats.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\stop.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\stopWatch.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\strategy.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\strategy2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\stumble.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\suitcase.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\switcher.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\tag.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\tags.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\tanle.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\timer.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\transfer.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\trash.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\travelSuitcase.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\tree.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\trolly.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\truck.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\tumbler.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\tv.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\twitter.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\twitter2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\umbrella.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\underConstruction.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\unlocked.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\upload.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\user.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\user2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\userComment.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\users.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\users2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\vault.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\vcard.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\view.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\vimeo.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\vimeo2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\walkingMan.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\wifi.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\wifi2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\windows.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\wordDoc.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\wordpress.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\wordpress2.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\youtube.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\zip.png" />
+    <Content Include="Content\expadm\images\icons\middlenav\zipFiles.png" />
+    <Content Include="Content\expadm\images\icons\notifications\accept.png" />
+    <Content Include="Content\expadm\images\icons\notifications\error.png" />
+    <Content Include="Content\expadm\images\icons\notifications\exclamation.png" />
+    <Content Include="Content\expadm\images\icons\notifications\information.png" />
+    <Content Include="Content\expadm\images\icons\topnav\contactAdmin.png" />
+    <Content Include="Content\expadm\images\icons\topnav\help.png" />
+    <Content Include="Content\expadm\images\icons\topnav\logout.png" />
+    <Content Include="Content\expadm\images\icons\topnav\mainWebsite.png" />
+    <Content Include="Content\expadm\images\icons\topnav\messages.png" />
+    <Content Include="Content\expadm\images\icons\topnav\profile.png" />
+    <Content Include="Content\expadm\images\icons\topnav\register.png" />
+    <Content Include="Content\expadm\images\icons\topnav\settings.png" />
+    <Content Include="Content\expadm\images\icons\topnav\subAdd.png" />
+    <Content Include="Content\expadm\images\icons\topnav\subInbox.png" />
+    <Content Include="Content\expadm\images\icons\topnav\subOutbox.png" />
+    <Content Include="Content\expadm\images\icons\topnav\subTrash.png" />
+    <Content Include="Content\expadm\images\icons\topnav\tasks.png" />
+    <Content Include="Content\expadm\images\img.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-icons_222222_256x240.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-icons_454545_256x240.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-icons_888888_256x240.png" />
+    <Content Include="Content\expadm\images\jquery_ui\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\expadm\images\leftArrow.png" />
+    <Content Include="Content\expadm\images\leftNavBg.png" />
+    <Content Include="Content\expadm\images\leftNavSub.png" />
+    <Content Include="Content\expadm\images\linesSep.png" />
+    <Content Include="Content\expadm\images\loginLogo.png" />
+    <Content Include="Content\expadm\images\middlebg.png" />
+    <Content Include="Content\expadm\images\navSep.png" />
+    <Content Include="Content\expadm\images\navSepHover.png" />
+    <Content Include="Content\expadm\images\number.png" />
+    <Content Include="Content\expadm\images\patbg1.png" />
+    <Content Include="Content\expadm\images\patbg2.png" />
+    <Content Include="Content\expadm\images\patbg3.png" />
+    <Content Include="Content\expadm\images\patbg4.png" />
+    <Content Include="Content\expadm\images\patbg5.png" />
+    <Content Include="Content\expadm\images\patterns\pat1.png" />
+    <Content Include="Content\expadm\images\patterns\pat2.png" />
+    <Content Include="Content\expadm\images\patterns\pat3.png" />
+    <Content Include="Content\expadm\images\patterns\pat4.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Content\expadm\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Content\expadm\images\rightArrow.png" />
+    <Content Include="Content\expadm\images\sadEmo.png" />
+    <Content Include="Content\expadm\images\searchBtn.png" />
+    <Content Include="Content\expadm\images\searchSmall.png" />
+    <Content Include="Content\expadm\images\spinner-bg.gif" />
+    <Content Include="Content\expadm\images\tabsSep.png" />
+    <Content Include="Content\expadm\images\tabsSepR.png" />
+    <Content Include="Content\expadm\images\tipsy.gif" />
+    <Content Include="Content\expadm\images\topArrow.png" />
+    <Content Include="Content\expadm\images\topNav.jpg" />
+    <Content Include="Content\expadm\images\ui.totop.png" />
+    <Content Include="Content\expadm\images\ui\basicBtn.png" />
+    <Content Include="Content\expadm\images\ui\blackBtn.png" />
+    <Content Include="Content\expadm\images\ui\blueBtn.png" />
+    <Content Include="Content\expadm\images\ui\greenBtn.png" />
+    <Content Include="Content\expadm\images\ui\greyishBtn.png" />
+    <Content Include="Content\expadm\images\ui\handle.png" />
+    <Content Include="Content\expadm\images\ui\numDataBg.png" />
+    <Content Include="Content\expadm\images\ui\pagination.png" />
+    <Content Include="Content\expadm\images\ui\progress.png" />
+    <Content Include="Content\expadm\images\ui\progressOverlay.png" />
+    <Content Include="Content\expadm\images\ui\redBtn.png" />
+    <Content Include="Content\expadm\images\ui\seaBtn.png" />
+    <Content Include="Content\expadm\images\ui\sliderBg.png" />
+    <Content Include="Content\expadm\images\ui\sliderBgVert.png" />
+    <Content Include="Content\expadm\images\ui\sliderOverlay.png" />
+    <Content Include="Content\expadm\images\ui\sliderOverlayVert.png" />
+    <Content Include="Content\expadm\images\ui\spinnerUpDown.png" />
+    <Content Include="Content\expadm\images\ui\uploadDisabled.png" />
+    <Content Include="Content\expadm\images\upload.png" />
+    <Content Include="Content\expadm\images\uploader\deleteFile.png" />
+    <Content Include="Content\expadm\images\uploader\error.png" />
+    <Content Include="Content\expadm\images\uploader\throbber.gif" />
+    <Content Include="Content\expadm\images\uploader\uploaded.png" />
+    <Content Include="Content\expadm\images\user.png" />
+    <Content Include="Content\expadm\images\userPic.png" />
+    <Content Include="Content\expadm\images\wysiwyg.bg.png" />
+    <Content Include="Content\expadm\images\wysiwyg.gif" />
+    <Content Include="Content\expadm\js\charts\auto.js" />
+    <Content Include="Content\expadm\js\charts\bar.js" />
+    <Content Include="Content\expadm\js\charts\chart.js" />
+    <Content Include="Content\expadm\js\charts\hBar.js" />
+    <Content Include="Content\expadm\js\charts\pie.js" />
+    <Content Include="Content\expadm\js\custom.js" />
+    <Content Include="Content\expadm\js\exp_conteudos.js" />
+    <Content Include="Content\expadm\js\exp_conteudo_bkp.js" />
+    <Content Include="Content\expadm\js\exp_fotos.js" />
+    <Content Include="Content\expadm\js\plugins\flot\excanvas.js" />
+    <Content Include="Content\expadm\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.canvas.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.canvas.min.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.min.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.orderBars.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.pie.min.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.resize.min.js" />
+    <Content Include="Content\expadm\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\expadm\js\plugins\forms\autogrowtextarea.js" />
+    <Content Include="Content\expadm\js\plugins\forms\autotab.js" />
+    <Content Include="Content\expadm\js\plugins\forms\chosen.jquery.min.js" />
+    <Content Include="Content\expadm\js\plugins\forms\Copy of jquery.validationEngine-en.js" />
+    <Content Include="Content\expadm\js\plugins\forms\forms.js" />
+    <Content Include="Content\expadm\js\plugins\forms\jquery.dualListBox.js" />
+    <Content Include="Content\expadm\js\plugins\forms\jquery.inputlimiter.min.js" />
+    <Content Include="Content\expadm\js\plugins\forms\jquery.maskedinput.min.js" />
+    <Content Include="Content\expadm\js\plugins\forms\jquery.tagsinput.min.js" />
+    <Content Include="Content\expadm\js\plugins\forms\jquery.validationEngine-en.js" />
+    <Content Include="Content\expadm\js\plugins\forms\jquery.validationEngine-pt.js" />
+    <Content Include="Content\expadm\js\plugins\forms\jquery.validationEngine.js" />
+    <Content Include="Content\expadm\js\plugins\monthpicker\MonthPicker.js" />
+    <Content Include="Content\expadm\js\plugins\monthpicker\MonthPicker.min.js" />
+    <Content Include="Content\expadm\js\plugins\other\calendar.min.js" />
+    <Content Include="Content\expadm\js\plugins\other\elfinder.min.js" />
+    <Content Include="Content\expadm\js\plugins\search\jquery.quick.search.js" />
+    <Content Include="Content\expadm\js\plugins\spinner\jquery.mousewheel.js" />
+    <Content Include="Content\expadm\js\plugins\spinner\ui.spinner.js" />
+    <Content Include="Content\expadm\js\plugins\tables\colResizable.min.js" />
+    <Content Include="Content\expadm\js\plugins\tables\jquery.dataTables.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery-ui-timepicker-addon.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.alerts.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.breadcrumbs.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.collapsible.min.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.colorpicker.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.jgrowl.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.listnav.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.prettyPhoto.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.progress.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.sourcerer.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.timeentry.min.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.tipsy.js" />
+    <Content Include="Content\expadm\js\plugins\ui\jquery.ToTop.js" />
+    <Content Include="Content\expadm\js\plugins\uploader\jquery.plupload.queue.js" />
+    <Content Include="Content\expadm\js\plugins\uploader\plupload.html4.js" />
+    <Content Include="Content\expadm\js\plugins\uploader\plupload.html5.js" />
+    <Content Include="Content\expadm\js\plugins\uploader\plupload.js" />
+    <Content Include="Content\expadm\js\plugins\wizards\jquery.form.wizard.js" />
+    <Content Include="Content\expadm\js\plugins\wizards\jquery.validate.js" />
+    <Content Include="Content\expadm\js\plugins\wysiwyg\jquery.wysiwyg.js" />
+    <Content Include="Content\expadm\js\plugins\wysiwyg\wysiwyg.colorpicker.js" />
+    <Content Include="Content\expadm\js\plugins\wysiwyg\wysiwyg.cssWrap.js" />
+    <Content Include="Content\expadm\js\plugins\wysiwyg\wysiwyg.image.js" />
+    <Content Include="Content\expadm\js\plugins\wysiwyg\wysiwyg.link.js" />
+    <Content Include="Content\expadm\js\plugins\wysiwyg\wysiwyg.table.js" />
+    <Content Include="Content\expadm\SWFUpload\css\default.css" />
+    <Content Include="Content\expadm\SWFUpload\jquery.swfupload.js" />
+    <Content Include="Content\expadm\SWFUpload\js\fileprogress.js" />
+    <Content Include="Content\expadm\SWFUpload\js\handlers.js" />
+    <Content Include="Content\expadm\SWFUpload\js\swfupload.queue.js" />
+    <Content Include="Content\expadm\SWFUpload\swfupload\cancel.png" />
+    <Content Include="Content\expadm\SWFUpload\swfupload\swfupload.js" />
+    <Content Include="Content\expadm\SWFUpload\swfupload\swfupload.swf" />
+    <Content Include="Content\expadm\SWFUpload\swfupload\swfuploadbutton.swf" />
+    <Content Include="Content\expadm\SWFUpload\swfupload\wdp_buttons_upload_114x29.png" />
+    <Content Include="Content\expadm\SWFUpload\swfupload\XPButtonUploadText_61x22.png" />
+    <Content Include="Content\imagens\icones\tipo10.png" />
+    <Content Include="Content\imagens\icones\tipo7.png" />
+    <Content Include="Content\imagens\icones\tipo2.png" />
+    <Content Include="Content\imagens\icones\tipo0.png" />
+    <Content Include="Content\imagens\icones\tipo1.png" />
+    <Content Include="Content\imagens\icones\tipo4.png" />
+    <Content Include="Content\imagens\icones\tipo3.png" />
+    <Content Include="Content\imagens\icones\tipo5.png" />
+    <Content Include="Content\imagens\icones\tipo9.png" />
+    <Content Include="Content\imagens\icones\tipo6.png" />
+    <Content Include="Content\imagens\loads\loader_red.gif" />
+    <Content Include="Content\imagens\notfound\br-notfound.jpg" />
+    <Content Include="Content\imagesboleto\6.gif" />
+    <Content Include="Content\imagesboleto\b.gif" />
+    <Content Include="Content\imagesboleto\barra.gif" />
+    <Content Include="Content\imagesboleto\BBLogo.gif" />
+    <Content Include="Content\imagesboleto\br-loader.jpg" />
+    <Content Include="Content\imagesboleto\corte.gif" />
+    <Content Include="Content\imagesboleto\p.gif" />
+    <Content Include="Content\imagesboleto\preto.gif" />
+    <Content Include="Content\imagesboleto\traco.gif" />
+    <Content Include="Content\imagesboleto\x.gif" />
+    <Content Include="Content\imagesproposta\logo.jpg" />
+    <Content Include="Content\restrito\css\base.css" />
+    <Content Include="Content\restrito\css\exp.css" />
+    <Content Include="Content\restrito\imgsite\br1.png" />
+    <Content Include="Content\restrito\imgsite\br11.png" />
+    <Content Include="Content\restrito\imgsite\br12.png" />
+    <Content Include="Content\restrito\imgsite\br13.png" />
+    <Content Include="Content\restrito\imgsite\br2.png" />
+    <Content Include="Content\restrito\imgsite\br3.png" />
+    <Content Include="Content\restrito\imgsite\br5.png" />
+    <Content Include="Content\restrito\imgsite\br6.png" />
+    <Content Include="Content\restrito\imgsite\br8.png" />
+    <Content Include="Content\restrito\imgsite\br9.png" />
+    <Content Include="Content\restrito\imgsite\colmeia.jpg" />
+    <Content Include="Content\restrito\imgsite\colmeia.png" />
+    <Content Include="Content\restrito\imgsite\favicon.ico" />
+    <Content Include="Content\restrito\imgsite\fnd_rdp.gif" />
+    <Content Include="Content\restrito\imgsite\fnd_topo_br.gif" />
+    <Content Include="Content\restrito\imgsite\hex1.png" />
+    <Content Include="Content\restrito\imgsite\hex11.png" />
+    <Content Include="Content\restrito\imgsite\hex12.png" />
+    <Content Include="Content\restrito\imgsite\hex2.png" />
+    <Content Include="Content\restrito\imgsite\hex5.png" />
+    <Content Include="Content\restrito\imgsite\hex6.png" />
+    <Content Include="Content\restrito\imgsite\hex8.png" />
+    <Content Include="Content\restrito\imgsite\hex9.png" />
+    <Content Include="Content\restrito\imgsite\hex13.png" />
+    <Content Include="Content\restrito\imgsite\logo.jpg" />
+    <Content Include="Content\xmls\configuracoes.xml" />
+    <Content Include="Content\xmls\informativo1.xml" />
+    <Content Include="Content\xmls\informativo2.xml" />
+    <Content Include="Content\xmls\informativo3.xml" />
+    <Content Include="Content\xmls\institucional63.xml" />
+    <Content Include="Content\xmls\institucional7.xml" />
+    <Content Include="Dlls\C5.dll" />
+    <Content Include="Dlls\Common.Logging.dll" />
+    <Content Include="Dlls\MySql.Data.dll" />
+    <Content Include="Dlls\MySql.Data.Entity.dll" />
+    <Content Include="Dlls\Quartz.dll" />
+    <Content Include="Dlls\WebActivator.dll" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\AjaxUpload\fileuploader.css" />
+    <Content Include="Scripts\AjaxUpload\fileuploader.js" />
+    <Content Include="Scripts\AjaxUpload\loading.gif" />
+    <Content Include="Content\expadm\js\plugins\flot\Charts.js" />
+    <Content Include="Scripts\datepicker\css\datepicker.css" />
+    <Content Include="Scripts\datepicker\css\datepicker3.css" />
+    <Content Include="Scripts\datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.az.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.da.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.de.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.el.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.et.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.he.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.id.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.is.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.it.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.no.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.th.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.ua.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="Scripts\datepicker\js\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="Scripts\tiny_mce\plugins\flot\jquery.flot.js" />
+    <Content Include="Scripts\tiny_mce\plugins\flot\jquery.flot.orderBars.js" />
+    <Content Include="Scripts\tiny_mce\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Scripts\tiny_mce\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Scripts\tiny_mce\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\contratos\modelo\contratopadrao.pdf" />
+    <Content Include="Scripts\tiny_mce\css\tiny_mce.css" />
+    <Content Include="Scripts\tiny_mce\jquery.tinymce.js" />
+    <Content Include="Scripts\tiny_mce\langs\en.js" />
+    <Content Include="Scripts\tiny_mce\langs\pt.js" />
+    <Content Include="Scripts\tiny_mce\license.txt" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\advlist\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autolink\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autolink\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autosave\langs\en.js" />
+    <Content Include="Scripts\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example_dependency\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example_dependency\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\lists\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\lists\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="Scripts\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\media.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\media\moxieplayer.swf" />
+    <Content Include="Scripts\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\preview\example.html" />
+    <Content Include="Scripts\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="Scripts\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="Scripts\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="Scripts\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="Scripts\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="Scripts\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\style\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\style\props.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\style\readme.txt" />
+    <Content Include="Scripts\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="Scripts\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="Scripts\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="Scripts\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\table\row.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\table\table.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="Scripts\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="Scripts\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\template\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\template\template.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Scripts\tiny_mce\plugins\visualblocks\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\visualblocks\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\template\caixadestaque.htm" />
+    <Content Include="Scripts\tiny_mce\template\citacaoleft.htm" />
+    <Content Include="Scripts\tiny_mce\template\citacaoright.htm" />
+    <Content Include="Scripts\tiny_mce\template\foto300.htm" />
+    <Content Include="Scripts\tiny_mce\template\foto620.htm" />
+    <Content Include="Scripts\tiny_mce\template\imgs\x.jpg" />
+    <Content Include="Scripts\tiny_mce\template\table620.htm" />
+    <Content Include="Scripts\tiny_mce\template\table620b.htm" />
+    <Content Include="Scripts\tiny_mce\template\table620c.htm" />
+    <Content Include="Scripts\tiny_mce\template\table620d.htm" />
+    <Content Include="Scripts\tiny_mce\template\table620e.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\flash.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\iframe.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\pagebreak.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\quicktime.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\realmedia.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\shockwave.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\trans.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\video.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\windowsmedia.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\langs\pt.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\langs\pt_dlg.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\shortcuts.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\highcontrast\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\highcontrast\dialog.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\highcontrast\ui.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="Scripts\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="Scripts\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="Scripts\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="Scripts\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="Scripts\tiny_mce\themes\simple\langs\pt.js" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="Scripts\tiny_mce\tiny_mce.js" />
+    <Content Include="Scripts\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="Scripts\tiny_mce\tiny_mce_src.js" />
+    <Content Include="Scripts\tiny_mce\utils\editable_selects.js" />
+    <Content Include="Scripts\tiny_mce\utils\form_utils.js" />
+    <Content Include="Scripts\tiny_mce\utils\mctabs.js" />
+    <Content Include="Scripts\tiny_mce\utils\validate.js" />
+    <Content Include="Scripts\validate\additional-methods.min.js" />
+    <Content Include="Scripts\validate\jquery.validate.min.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Default2\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\contratos\modelo\contrato-br.pdf" />
+    <Content Include="Content\font\GoodOSF-Black.ttf" />
+    <Content Include="Content\font\GoodOSF-Book.ttf" />
+    <Content Include="Content\font\GoodOSF-Light.ttf" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\BRConsórciosNovo.pubxml" />
+    <None Include="Properties\PublishProfiles\BRPub2312.pubxml" />
+    <Content Include="Template\_EmailMaster.cshtml" />
+    <Content Include="Template\Web.config" />
+    <Content Include="Template\EmailImportacaoProdutoTemplate.cshtml" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\exp.core\exp.core.csproj">
+      <Project>{b89eee44-8995-45f3-9d32-dd3163ff6785}</Project>
+      <Name>exp.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\exp.dados\exp.dados.csproj">
+      <Project>{f2ecfc12-95b1-4bcd-8bb5-48b77adad7b1}</Project>
+      <Name>exp.dados</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\API\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>17536</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:45978/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

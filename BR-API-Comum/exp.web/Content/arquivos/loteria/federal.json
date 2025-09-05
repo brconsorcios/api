@@ -1,0 +1,17 @@
+{
+  "resultados": {
+    "_xpath": "//table//tr[position()>1]",
+    "cd_concurso": ".//td[1]",
+    "data_sorteio": ".//td[2]",
+    "numero_premio_1": ".//td[3]",
+    "numero_premio_2": ".//td[4]",
+    "numero_premio_3": ".//td[5]",
+    "numero_premio_4": ".//td[6]",
+    "numero_premio_5": ".//td[7]",
+    "valor_premio_1": ".//td[8]",
+    "valor_premio_2": ".//td[9]",
+    "valor_premio_3": ".//td[10]",
+    "valor_premio_4": ".//td[11]",
+    "valor_premio_5": ".//td[12]"
+  }
+}

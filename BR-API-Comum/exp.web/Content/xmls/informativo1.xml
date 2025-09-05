@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<conteudoXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>57</id>
+    <tipo_id>1</tipo_id>
+    <titulo>TCGL cria nova linha de atendimento ao Shopping</titulo>
+    <secao>Informativo</secao>
+    <sinopse>Desde o 01 de novembro, está em operação a linha 446 – Pacaembu I, que faz o atendimento dos clientes do
+        Terminal Milton Gavetti para o Londrina Norte Shopping.
+    </sinopse>
+    <tags>grande londrina,transporte urbano</tags>
+    <conteudotexto>&lt;div class="wysiwygImgGrande"&gt;&lt;img style="float: left; margin: 10px;" alt=""
+        src="../../../content/arquivos/conteudo/178_inforg.jpg" /&gt;&lt;/div&gt;
+        &lt;p&gt;Desde o 01 de novembro, est&amp;aacute; em opera&amp;ccedil;&amp;atilde;o a linha 446 &amp;ndash;
+        Pacaembu I, que faz o atendimento dos clientes do Terminal Milton Gavetti para o Londrina Norte Shopping, centro
+        de compras e lazer inaugurado no mesmo dia, na Zona Norte da cidade.&lt;/p&gt;
+        &lt;p&gt;O Londrina Norte Shopping conta com 168 lojas, sendo 9 &amp;acirc;ncoras, 20 fastfoods, 06 salas de
+        cinema, 01 hipermercado e 1500 vagas de estacionamento.&lt;/p&gt;
+        &lt;p&gt;O percurso da linha 446 come&amp;ccedil;a no Terminal Milton Gavetti, segue pela Avenida Sylvio&amp;nbsp;Barros,
+        entra nas ruas de acesso ao Shopping, Rua Antonio Mano, Avenida L&amp;uacute;cia Helena&amp;nbsp;Gon&amp;ccedil;alves
+        Viana, entra novamente na Sylvio&amp;nbsp;Barros e retorna ao Terminal.&lt;/p&gt;
+        &lt;p&gt;&amp;ldquo;A empresa sempre acompanhou o crescimento da cidade e n&amp;atilde;o seria diferente com a
+        cria&amp;ccedil;&amp;atilde;o desta linha. Estamos sempre atentos &amp;agrave; movimenta&amp;ccedil;&amp;atilde;o
+        dos usu&amp;aacute;rios e, embora a cria&amp;ccedil;&amp;atilde;o de uma linha n&amp;atilde;o dependa da empresa
+        e sim do &amp;oacute;rg&amp;atilde;o gestor (CMTU), acompanhamos essa movimenta&amp;ccedil;&amp;atilde;o para
+        identificar poss&amp;iacute;veis demandas do transporte coletivo&amp;rdquo;, conta Daniel Martins, diretor de
+        opera&amp;ccedil;&amp;otilde;es da TCGL.&lt;/p&gt;
+        &lt;p style="text-align: right;"&gt;&lt;i&gt;Texto: Doc Comunica&amp;ccedil;&amp;atilde;o (Com Ascom Londrina
+        Norte Shopping)&lt;/i&gt;&lt;/p&gt;
+        &lt;p style="text-align: right;"&gt;&lt;i&gt;Mande sua sugest&amp;atilde;o de pauta para &lt;/i&gt;&lt;a
+        title="mailto:comunicacao@tcgl.com.br
+        CTRL + Clique para seguir o link" href="mailto:comunicacao@tcgl.com.br"&gt;comunicacao@tcgl.com.br&lt;/a&gt;&lt;/p&gt;
+    </conteudotexto>
+    <dtpublicacao>2012-11-22T16:19:00</dtpublicacao>
+    <manchete>false</manchete>
+    <capa>false</capa>
+    <ordem xsi:nil="true"/>
+    <disponivel>true</disponivel>
+    <usuario_criador xsi:nil="true"/>
+    <dtcriado>2012-11-23T10:49:51</dtcriado>
+    <usuario_modificou xsi:nil="true"/>
+    <dtmodificado xsi:nil="true"/>
+    <conteditorias>Ações TCGL</conteditorias>
+    <conteudosanexos>~/content/arquivos/conteudo/178_infor.jpg</conteudosanexos>
+</conteudoXml>

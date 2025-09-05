@@ -1,0 +1,24 @@
+﻿@using exp.core.Utilitarios
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>EmailMaster</title>
+</head>
+<body>
+<br/>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+        <td></td>
+        <td width="@(ViewBag.EmailWidth ?? 600)">
+            @if (!EnvironmentHelpers.IsProduction())
+            {
+                <h1 style="color: red;">*** TESTE ***</h1>
+            }
+            @RenderBody()
+        </td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>

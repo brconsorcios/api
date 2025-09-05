@@ -1,0 +1,353 @@
+body {
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    scrollbar-3dlight-color: #F0F0EE;
+    scrollbar-arrow-color: #676662;
+    scrollbar-base-color: #F0F0EE;
+    scrollbar-darkshadow-color: #DDDDDD;
+    scrollbar-face-color: #E0E0DD;
+    scrollbar-highlight-color: #F0F0EE;
+    scrollbar-shadow-color: #F0F0EE;
+    scrollbar-track-color: #F5F5F5;
+}
+
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10.5pt;
+}
+
+p {
+    line-height: 22px;
+    margin: 16px 0;
+}
+
+td {
+    font-size: 10px;
+}
+
+pre {
+    font-size: 10px;
+}
+
+.subtitulo1 {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.subtitulo2 {
+    font-weight: bold;
+    font-size: 12px;
+    color: #FF0000;
+}
+
+.tablerow1 {
+    background-color: #BBBBBB;
+}
+
+thead {
+    background-color: #EFEFEF;
+}
+
+tfoot {
+    background-color: #BBBBFF;
+}
+
+th {
+    font-size: 13px;
+}
+
+/* Basic formats */
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Global align classes */
+
+.left {
+    text-align: inherit;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.full {
+    text-align: justify;
+}
+
+/* Image and table specific aligns */
+
+img.left, table.left, div.left {
+    float: left;
+    text-align: inherit;
+}
+
+img.center, table.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: inherit;
+}
+
+img.center {
+    display: block;
+}
+
+img.right, table.right {
+    float: right;
+    text-align: inherit;
+}
+
+
+/*Templates*-------------------------------------------------------------------------------------------------*/
+
+.marginleft {
+    margin: 0 0 20px 20px;
+}
+
+.marginright {
+    margin: 0 20px 20px 0;
+}
+
+.citacao {
+    padding: 46px 0 10px 0;
+    background: url(/content/imgsite/aspas.png) no-repeat left 6px;
+    font-size: 15px;
+    font-style: italic;
+    color: #838383;
+    width: 350px;
+    height: auto;
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.cxtexto {
+    padding: 10px;
+    background: #f2f2f2 url(/content/imgsite/fnd_lista.jpg) repeat-x left top;
+    /*width: 960px;
+    height: 151px;*/
+    border: 1px solid #c9c9c9;
+    display: block;
+    min-height: 150px;
+}
+
+.cxfoto div {
+    max-height: 142px;
+    overflow: hidden;
+}
+
+.cxfoto {
+    border: 1px solid #a9a9a9;
+    background: #ffffff;
+    width: 276px;
+    height: 143px;
+    padding: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cxfoto:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -72px 0 -138px 0;
+}
+
+.foto300 {
+    width: 300px;
+    overflow: hidden;
+    margin: 0 1.75em 1.1em 0;
+}
+
+.foto620 {
+    width: 620px;
+    overflow: hidden;
+    margin: 0 1.75em 1.1em 0;
+}
+
+.legenda {
+    font-size: 10px;
+}
+
+
+.table620horlist {
+    font-size: 12px;
+    background: #fff;
+    margin: 0 auto;
+    /*width: 620px;*/
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table620horlist th {
+    font-size: 14px;
+    font-weight: normal;
+    color: #039;
+    padding: 10px 8px;
+    border-bottom: 2px solid #6678b1;
+    line-height: 1.6em;
+    background: none;
+}
+
+.table620horlist td {
+    color: #669;
+    padding: 9px 8px 0px 8px;
+    line-height: 1.6em;
+}
+
+.table620horlist tbody tr:hover td {
+    color: #009;
+}
+
+
+.table620horlistb {
+    font-size: 12px;
+    background: #fff;
+    margin: 0 auto;
+    /*width: 620px;*/
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table620horlistb th {
+    font-size: 14px;
+    font-weight: normal;
+    color: #039;
+    padding: 10px 8px;
+    border-bottom: 2px solid #6678b1;
+    line-height: 1.6em;
+    background: none;
+}
+
+.table620horlistb td {
+    border-bottom: 1px solid #ccc;
+    line-height: 1.6em;
+    color: #669;
+    padding: 6px 8px;
+}
+
+.table620horlistb tbody tr:hover td {
+    color: #009;
+}
+
+.table620horlistc {
+    font-size: 12px;
+    margin: 0 auto;
+    /*width: 620px;*/
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.table620horlistc thead {
+    background: none;
+}
+
+.table620horlistc th {
+    padding: 8px 2px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.6em;
+    border-bottom: 2px solid #6678b1;
+    border-right: 30px solid #fff;
+    border-left: 30px solid #fff;
+    color: #039;
+    background: none;
+}
+
+.table620horlistc td {
+    padding: 12px 2px 0px 2px;
+    border-right: 30px solid #fff;
+    border-left: 30px solid #fff;
+    color: #669;
+    line-height: 1.6em;
+}
+
+
+.table620horlistd {
+    font-size: 12px;
+    margin: 45px;
+    /*width: 620px;*/
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.table620horlistd th {
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+
+}
+
+.table620horlistd td {
+    padding: 8px;
+    background: #e8edff;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent;
+}
+
+.table620horlistd tr:hover td {
+    background: #d0dafd;
+    color: #339;
+}
+
+.table620horlistdzebra {
+    font-size: 12px;
+    margin: 45px;
+    /*width: 620px;*/
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.table620horlistdzebra th {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 12px 15px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    color: #039;
+}
+
+.table620horlistdzebra td {
+    padding: 8px 15px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    color: #669;
+}
+
+.vzebra-odd {
+    background: #eff2ff;
+}
+
+.vzebra-even {
+    background: #e8edff;
+}
+
+.table620horlistdzebra .vzebra-adventure, .table620horlistdzebra .vzebra-children {
+    background: #d0dafd;
+    border-bottom: 1px solid #c8d4fd;
+}
+
+.table620horlistdzebra .vzebra-comedy, .table620horlistdzebra .vzebra-action {
+    background: #dce4ff;
+    border-bottom: 1px solid #d6dfff;
+}
+
+/*Templates*-------------------------------------------------------------------------------------------------*/

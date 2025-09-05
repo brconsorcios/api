@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = BrConsorcio.Api
+build_property.ProjectDir = /Users/adrianoapj/Downloads/OneDrive_1_04-09-2025/api/BrConsorcio.Api/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

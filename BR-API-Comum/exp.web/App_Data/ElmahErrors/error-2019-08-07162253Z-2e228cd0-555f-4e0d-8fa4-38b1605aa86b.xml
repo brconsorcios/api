@@ -1,0 +1,160 @@
+﻿<error errorId="2e228cd0-555f-4e0d-8fa4-38b1605aa86b" application="/LM/W3SVC/2/ROOT" host="DESKTOP-QRG4AOU" type="System.DllNotFoundException" message="MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" source="MySql.Data" detail="System.DllNotFoundException: MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d&#xD;&#xA;   em MySql.Data.MySqlClient.MySqlClientFactory.get_MySqlDbProviderServicesInstance()&#xD;&#xA;   em MySql.Data.MySqlClient.MySqlClientFactory.System.IServiceProvider.GetService(Type serviceType)&#xD;&#xA;   em System.Data.Common.DbProviderServices.GetProviderServices(DbProviderFactory factory)&#xD;&#xA;   em System.Data.Metadata.Edm.StoreItemCollection.Loader.InitializeProviderManifest(Action`3 addError)&#xD;&#xA;   em System.Data.Metadata.Edm.StoreItemCollection.Loader.OnProviderManifestTokenNotification(String token, Action`3 addError)&#xD;&#xA;   em System.Data.EntityModel.SchemaObjectModel.Schema.HandleProviderManifestTokenAttribute(XmlReader reader)&#xD;&#xA;   em System.Data.EntityModel.SchemaObjectModel.Schema.HandleAttribute(XmlReader reader)&#xD;&#xA;   em System.Data.EntityModel.SchemaObjectModel.SchemaElement.ParseAttribute(XmlReader reader)&#xD;&#xA;   em System.Data.EntityModel.SchemaObjectModel.SchemaElement.Parse(XmlReader reader)&#xD;&#xA;   em System.Data.EntityModel.SchemaObjectModel.Schema.HandleTopLevelSchemaElement(XmlReader reader)&#xD;&#xA;   em System.Data.EntityModel.SchemaObjectModel.Schema.InternalParse(XmlReader sourceReader, String sourceLocation)&#xD;&#xA;   em System.Data.EntityModel.SchemaObjectModel.Schema.Parse(XmlReader sourceReader, String sourceLocation)&#xD;&#xA;   em System.Data.EntityModel.SchemaObjectModel.SchemaManager.ParseAndValidate(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths, SchemaDataModelOption dataModel, AttributeValueNotification providerNotification, AttributeValueNotification providerManifestTokenNotification, ProviderManifestNeeded providerManifestNeeded, IList`1&amp; schemaCollection)&#xD;&#xA;   em System.Data.Metadata.Edm.StoreItemCollection.Loader.LoadItems(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths)&#xD;&#xA;   em System.Data.Metadata.Edm.StoreItemCollection.Init(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths, Boolean throwOnError, DbProviderManifest&amp; providerManifest, DbProviderFactory&amp; providerFactory, String&amp; providerManifestToken, Memoizer`2&amp; cachedCTypeFunction)&#xD;&#xA;   em System.Data.Metadata.Edm.StoreItemCollection..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths)&#xD;&#xA;   em System.Data.Metadata.Edm.MetadataCache.StoreMetadataEntry.LoadStoreCollection(EdmItemCollection edmItemCollection, MetadataArtifactLoader loader)&#xD;&#xA;   em System.Data.Metadata.Edm.MetadataCache.StoreItemCollectionLoader.LoadItemCollection(StoreMetadataEntry entry)&#xD;&#xA;   em System.Data.Metadata.Edm.MetadataCache.LoadItemCollection[T](IItemCollectionLoader`1 itemCollectionLoader, T entry)&#xD;&#xA;   em System.Data.Metadata.Edm.MetadataCache.GetOrCreateStoreAndMappingItemCollections(String cacheKey, MetadataArtifactLoader loader, EdmItemCollection edmItemCollection, Object&amp; entryToken)&#xD;&#xA;   em System.Data.EntityClient.EntityConnection.LoadStoreItemCollections(MetadataWorkspace workspace, DbConnection storeConnection, DbProviderFactory factory, DbConnectionOptions connectionOptions, EdmItemCollection edmItemCollection, MetadataArtifactLoader artifactLoader)&#xD;&#xA;   em System.Data.EntityClient.EntityConnection.GetMetadataWorkspace(Boolean initializeAllCollections)&#xD;&#xA;   em System.Data.EntityClient.EntityConnection.InitializeMetadata(DbConnection newConnection, DbConnection originalConnection, Boolean closeOriginalConnectionOnFailure)&#xD;&#xA;   em System.Data.EntityClient.EntityConnection.Open()&#xD;&#xA;   em System.Data.Objects.ObjectContext.EnsureConnection()&#xD;&#xA;   em System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)&#xD;&#xA;   em System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()&#xD;&#xA;   em System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)&#xD;&#xA;   em System.Data.Objects.ELinq.ObjectQueryProvider.&lt;&gt;c__11`1.&lt;GetElementFunction&gt;b__11_1(IEnumerable`1 sequence)&#xD;&#xA;   em System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)&#xD;&#xA;   em System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)&#xD;&#xA;   em System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)&#xD;&#xA;   em exp.web.Code.CustomAuthorizeAttribute.OnAuthorization(HttpActionContext actionContext) na C:\repo\BRCONSORCIOS-SITES\SITES\4ANALISE\BR-API-Comum\exp.web\Code\CustomAuthorizeAttribute.cs:linha 96" time="2019-08-07T16:22:53.5548125Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:0&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_AUTHORIZATION:Basic TEpPTjAxOmFwaWludGVybmV0&#xD;&#xA;HTTP_HOST:localhost:17536&#xD;&#xA;HTTP_USER_AGENT:PostmanRuntime/7.15.2&#xD;&#xA;HTTP_POSTMAN_TOKEN:89d8912d-1800-4bc8-bb09-09485a7dfbc0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 0&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Authorization: Basic TEpPTjAxOmFwaWludGVybmV0&#xD;&#xA;Host: localhost:17536&#xD;&#xA;User-Agent: PostmanRuntime/7.15.2&#xD;&#xA;Postman-Token: 89d8912d-1800-4bc8-bb09-09485a7dfbc0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\repo\BRCONSORCIOS-SITES\SITES\4ANALISE\BR-API-Comum\exp.web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/api/proposta/200789" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\repo\BRCONSORCIOS-SITES\SITES\4ANALISE\BR-API-Comum\exp.web\api\proposta\200789" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="50122" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/api/proposta/200789" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="17536" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/api/proposta/200789" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_AUTHORIZATION">
+      <value string="Basic TEpPTjAxOmFwaWludGVybmV0" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:17536" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="PostmanRuntime/7.15.2" />
+    </item>
+    <item name="HTTP_POSTMAN_TOKEN">
+      <value string="89d8912d-1800-4bc8-bb09-09485a7dfbc0" />
+    </item>
+  </serverVariables>
+</error>

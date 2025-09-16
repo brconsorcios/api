@@ -1,280 +1,385 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{F2ECFC12-95B1-4BCD-8BB5-48B77ADAD7B1}</ProjectGuid>
-        <OutputType>Library</OutputType>
-        <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>exp.dados</RootNamespace>
-        <AssemblyName>exp.dados</AssemblyName>
-        <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-        <FileAlignment>512</FileAlignment>
-        <TargetFrameworkProfile/>
-        <SccProjectName>SAK</SccProjectName>
-        <SccLocalPath>SAK</SccLocalPath>
-        <SccAuxPath>SAK</SccAuxPath>
-        <SccProvider>SAK</SccProvider>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <Prefer32Bit>false</Prefer32Bit>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <DebugType>pdbonly</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <Prefer32Bit>false</Prefer32Bit>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-            <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-            <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-            <HintPath>..\packages\MySql.Data.6.7.9\lib\net40\MySql.Data.dll</HintPath>
-        </Reference>
-        <Reference Include="MySql.Data.Entity, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-            <HintPath>..\packages\MySql.Data.Entity.6.7.9\lib\net40\MySql.Data.Entity.dll</HintPath>
-        </Reference>
-        <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-            <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="System"/>
-        <Reference Include="System.ComponentModel.DataAnnotations"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="System.Data.Entity"/>
-        <Reference Include="System.Net.Http">
-            <HintPath>..\System.Net.Http.dll</HintPath>
-        </Reference>
-        <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <SpecificVersion>False</SpecificVersion>
-            <HintPath>..\System.Net.Http.Formatting.dll</HintPath>
-        </Reference>
-        <Reference Include="System.Net.Http.WebRequest">
-            <HintPath>..\System.Net.Http.WebRequest.dll</HintPath>
-        </Reference>
-        <Reference Include="System.Runtime.Caching"/>
-        <Reference Include="System.Runtime.Serialization"/>
-        <Reference Include="System.Security"/>
-        <Reference Include="System.Web"/>
-        <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="System.Web.Mvc.Extensions, Version=1.0.9.0, Culture=neutral, PublicKeyToken=17e35335fc9f8fc8, processorArchitecture=MSIL">
-            <HintPath>..\packages\System.Web.Mvc.Extensions.Mvc.4.1.0.9\lib\net40\System.Web.Mvc.Extensions.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="System.Xml.Linq"/>
-        <Reference Include="System.Data.DataSetExtensions"/>
-        <Reference Include="Microsoft.CSharp"/>
-        <Reference Include="System.Data"/>
-        <Reference Include="System.Xml"/>
-        <Reference Include="WebAPI.OutputCache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Strathweb.CacheOutput.0.5\lib\net40\WebAPI.OutputCache.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-        <Reference Include="WebApi.OutputCache.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Strathweb.CacheOutput.0.5\lib\net40\WebApi.OutputCache.Core.dll</HintPath>
-            <Private>True</Private>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="anuncios\Anuncios.cs"/>
-        <Compile Include="atendimentos\FichaImpressaoModel.cs"/>
-        <Compile Include="dominio\assembleia.cs"/>
-        <Compile Include="dominio\atendimento.cs"/>
-        <Compile Include="dominio\atendimentosanexo.cs"/>
-        <Compile Include="dominio\autorizacao_cobranca_digital_cota.cs"/>
-        <Compile Include="dominio\autorizacao_cobranca_digital.cs"/>
-        <Compile Include="dominio\ben.cs"/>
-        <Compile Include="dominio\bensgrupovenda.cs"/>
-        <Compile Include="dominio\bensimagen.cs"/>
-        <Compile Include="dominio\bensvenda.cs"/>
-        <Compile Include="dominio\contautore.cs"/>
-        <Compile Include="dominio\conteditoria.cs"/>
-        <Compile Include="dominio\conteudo.cs"/>
-        <Compile Include="dominio\conteudosanexo.cs"/>
-        <Compile Include="dominio\contratos\contrato.cs"/>
-        <Compile Include="dominio\contratos\contratos_down.cs"/>
-        <Compile Include="dominio\conttopico.cs"/>
-        <Compile Include="dominio\bensdiverso.cs"/>
-        <Compile Include="dominio\curriculo.cs"/>
-        <Compile Include="dominio\grupo_informacoes.cs"/>
-        <Compile Include="dominio\loteria_federal_resultados.cs"/>
-        <Compile Include="dominio\ouvidoria.cs"/>
-        <Compile Include="dominio\planovendasite.cs"/>
-        <Compile Include="dominio\tbparceiros_pf.cs"/>
-        <Compile Include="dominio\tbparceiros_socios.cs"/>
-        <Compile Include="dominio\ddd.cs"/>
-        <Compile Include="dominio\empprod.cs"/>
-        <Compile Include="dominio\empresa.cs"/>
-        <Compile Include="dominio\entidade.cs"/>
-        <Compile Include="dominio\filiai.cs"/>
-        <Compile Include="dominio\homecoluna.cs"/>
-        <Compile Include="dominio\indicaco.cs"/>
-        <Compile Include="dominio\menuadm.cs"/>
-        <Compile Include="dominio\parceiro.cs"/>
-        <Compile Include="dominio\parceiro_vendas.cs"/>
-        <Compile Include="dominio\pesquisa_clientes.cs"/>
-        <Compile Include="dominio\pesquisa_perguntas.cs"/>
-        <Compile Include="dominio\pesquisa_respostas.cs"/>
-        <Compile Include="dominio\pesquisa_resultados.cs"/>
-        <Compile Include="dominio\pesquisa_tipos.cs"/>
-        <Compile Include="dominio\pessoa.cs"/>
-        <Compile Include="dominio\produto.cs"/>
-        <Compile Include="dominio\propostaparceria.cs"/>
-        <Compile Include="dominio\site.cs"/>
-        <Compile Include="dominio\StatusAtendimento.cs"/>
-        <Compile Include="dominio\tbparceiro.cs"/>
-        <Compile Include="dominio\tbparceiros_end.cs"/>
-        <Compile Include="dominio\tbparceiros_pj.cs"/>
-        <Compile Include="dominio\TiposIndicacao.cs"/>
-        <Compile Include="dominio\usuario.cs"/>
-        <Compile Include="dominio\vaga.cs"/>
-        <Compile Include="dominio\vendedore.cs"/>
-        <Compile Include="dominio\viewbemantigo.cs"/>
-        <Compile Include="dominio\viewbemsite.cs"/>
-        <Compile Include="dominio\viewben.cs"/>
-        <Compile Include="dominio\viewconteudo.cs"/>
-        <Compile Include="dominio\viewmenu.cs"/>
-        <Compile Include="dominio\viewtaxas.cs"/>
-        <Compile Include="dominio\vinculovaga.cs"/>
-        <Compile Include="dominio\Xml\ConfiguracoesXml.cs"/>
-        <Compile Include="dominio\Xml\conteudoXml.cs"/>
-        <Compile Include="indicasoes\FaleFacilModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoBemEscolhidoModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoBlackFriday2017Model.cs"/>
-        <Compile Include="indicasoes\IndicacaoCompraInternetModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoEmailModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoFaleConoscoModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoFaleFacilModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoIncompletaModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoLigacaoModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoLigamosModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoPgtoModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoRapidaModel.cs"/>
-        <Compile Include="indicasoes\IndicacaoVisitaModel.cs"/>
-        <Compile Include="indicasoes\LigamosparaVoceModel.cs"/>
-        <Compile Include="indicasoes\OuvidoriaModel.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="Seguranca\AcessoRestritoAttribute.cs"/>
-        <Compile Include="Seguranca\AutenticacaoDePaginas.cs"/>
-        <Compile Include="Seguranca\ClassEncryptDescrypt.cs"/>
-        <Compile Include="Servicos\ApiExpResults.cs"/>
-        <Compile Include="Servicos\BemEscolhidoModel.cs"/>
-        <Compile Include="Servicos\BenDetalheModel.cs"/>
-        <Compile Include="Servicos\BuscaCidadesModel.cs"/>
-        <Compile Include="Servicos\BuscaProfissoesModel.cs"/>
-        <Compile Include="Servicos\CampainhaSuperpayModel.cs"/>
-        <Compile Include="Servicos\CartoesCredito.cs"/>
-        <Compile Include="Servicos\ClienteConfirmarModel.cs"/>
-        <Compile Include="Servicos\BuscaCepModel.cs"/>
-        <Compile Include="Servicos\ClienteCotasModel.cs"/>
-        <Compile Include="Servicos\CobrancaDigitalRetornoModel.cs"/>
-        <Compile Include="Servicos\ParceirosModel.cs"/>
-        <Compile Include="Servicos\PrazosDisponiveisConsulta.cs"/>
-        <Compile Include="Servicos\PrazosDisponiveisDetalhe.cs"/>
-        <Compile Include="Servicos\PrazosDisponiveisIdentificador.cs"/>
-        <Compile Include="Servicos\ProdutosHelper.cs"/>
-        <Compile Include="Servicos\PropostaParceriaViewModel.cs"/>
-        <Compile Include="Servicos\DetalhePlanoModel.cs"/>
-        <Compile Include="Servicos\EmailModel.cs"/>
-        <Compile Include="Servicos\EmissaoBoletoModel.cs"/>
-        <Compile Include="Servicos\EmissaoBoletoRetornoModel.cs"/>
-        <Compile Include="Servicos\EstadosCivisModel.cs"/>
-        <Compile Include="Servicos\ExcludeCamposIndicacao.cs"/>
-        <Compile Include="Servicos\Febraban.cs"/>
-        <Compile Include="Servicos\GerarDocsCompra.cs"/>
-        <Compile Include="Servicos\IndicacoesRelatorioModel.cs"/>
-        <Compile Include="Servicos\NewsletterModel.cs"/>
-        <Compile Include="Servicos\PagConsorcio.cs"/>
-        <Compile Include="Servicos\ParceriaViewModel.cs"/>
-        <Compile Include="Servicos\PessoaEmailModel.cs"/>
-        <Compile Include="Servicos\PessoaEnderecoModel.cs"/>
-        <Compile Include="Servicos\PessoaFisicaModel.cs"/>
-        <Compile Include="Servicos\PessoaIdentificaModel.cs"/>
-        <Compile Include="Servicos\PessoaJuridicaModel.cs"/>
-        <Compile Include="Servicos\PessoaRetornoModel.cs"/>
-        <Compile Include="Servicos\PessoaTelefoneModel.cs"/>
-        <Compile Include="Servicos\PFModel.cs"/>
-        <Compile Include="Servicos\PJModel.cs"/>
-        <Compile Include="Servicos\PRModel.cs"/>
-        <Compile Include="Servicos\PropostaModel.cs"/>
-        <Compile Include="Servicos\PropostaRetornoModel.cs"/>
-        <Compile Include="Servicos\RdStation\Lead.cs"/>
-        <Compile Include="Servicos\RdStation\LeadFaleConosco.cs"/>
-        <Compile Include="Servicos\RdStation\LeadIndicacao.cs"/>
-        <Compile Include="Servicos\RdStation\RdStationApiClient.cs"/>
-        <Compile Include="Servicos\RdStation\RdStationBusiness.cs"/>
-        <Compile Include="Servicos\SegundaViaBoleto.cs"/>
-        <Compile Include="Servicos\SegundaViaBoletoTaxas.cs"/>
-        <Compile Include="Servicos\SiteLayout.cs"/>
-        <Compile Include="Servicos\TokenModel.cs"/>
-        <Compile Include="Servicos\VerificarVendaIndicadaModel.cs"/>
-        <Compile Include="Servicos\VerificarVendaIndicadaResult.cs"/>
-        <Compile Include="trabalheconosco\CurriculoApiModel.cs"/>
-        <Compile Include="trabalheconosco\CurriculoBaseModel.cs"/>
-        <Compile Include="trabalheconosco\CurriculoModel.cs"/>
-        <Compile Include="trabalheconosco\VagaModel.cs"/>
-        <Compile Include="trabalheconosco\VinculoVagaViewModel.cs"/>
-        <Compile Include="Uteis\FileExtensionsAttribute.cs"/>
-        <Compile Include="Uteis\FileSizeAttribute.cs"/>
-        <Compile Include="Uteis\FormValueRequiredAttribute.cs"/>
-        <Compile Include="Xml\ConfiguracoesXml.cs"/>
-    </ItemGroup>
-    <ItemGroup>
-        <None Include="App.config">
-            <SubType>Designer</SubType>
-        </None>
-        <None Include="packages.config"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}"/>
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\exp.core\exp.core.csproj">
-            <Project>{b89eee44-8995-45f3-9d32-dd3163ff6785}</Project>
-            <Name>exp.core</Name>
-        </ProjectReference>
-    </ItemGroup>
-    <ItemGroup>
-        <Folder Include="Database\"/>
-    </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
-    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-         Other similar extension points exist, see Microsoft.Common.targets.
-    <Target Name="BeforeBuild">
-    </Target>
-    <Target Name="AfterBuild">
-    </Target>
-    -->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2ECFC12-95B1-4BCD-8BB5-48B77ADAD7B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>exp.dados</RootNamespace>
+    <AssemblyName>exp.dados</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.7.9\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.7.9\lib\net40\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <HintPath>..\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc.Extensions, Version=1.0.9.0, Culture=neutral, PublicKeyToken=17e35335fc9f8fc8, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Web.Mvc.Extensions.Mvc.4.1.0.9\lib\net40\System.Web.Mvc.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebAPI.OutputCache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Strathweb.CacheOutput.0.5\lib\net40\WebAPI.OutputCache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebApi.OutputCache.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Strathweb.CacheOutput.0.5\lib\net40\WebApi.OutputCache.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="anuncios\Anuncios.cs" />
+    <Compile Include="atendimentos\FichaImpressaoModel.cs" />
+    <Compile Include="atendimentos\InteracaoModel.cs" />
+    <Compile Include="dominio\assembleia.cs" />
+    <Compile Include="dominio\atendimento.cs" />
+    <Compile Include="dominio\atendimentosanexo.cs" />
+    <Compile Include="dominio\autorizacao_cobranca_digital_cota.cs" />
+    <Compile Include="dominio\autorizacao_cobranca_digital.cs" />
+    <Compile Include="dominio\ben.cs" />
+    <Compile Include="dominio\bensgrupovenda.cs" />
+    <Compile Include="dominio\bensimagen.cs" />
+    <Compile Include="dominio\bensvenda.cs" />
+    <Compile Include="dominio\cliente.cs" />
+    <Compile Include="dominio\cliente_email.cs" />
+    <Compile Include="dominio\cliente_end.cs" />
+    <Compile Include="dominio\cliente_fone.cs" />
+    <Compile Include="dominio\cliente_pf.cs" />
+    <Compile Include="dominio\cliente_pj.cs" />
+    <Compile Include="dominio\contautore.cs" />
+    <Compile Include="dominio\conteditoria.cs" />
+    <Compile Include="dominio\conteudo.cs" />
+    <Compile Include="dominio\conteudosanexo.cs" />
+    <Compile Include="dominio\contratosproposta.cs" />
+    <Compile Include="dominio\contratos\contrato.cs" />
+    <Compile Include="dominio\contratos\contratos_down.cs" />
+    <Compile Include="dominio\conttopico.cs" />
+    <Compile Include="dominio\bensdiverso.cs" />
+    <Compile Include="dominio\curriculo.cs" />
+    <Compile Include="dominio\grupo_informacoes.cs" />
+    <Compile Include="dominio\loteria_federal_resultados.cs" />
+    <Compile Include="dominio\ouvidoria.cs" />
+    <Compile Include="dominio\pedido_troca_senha.cs" />
+    <Compile Include="dominio\planovendasite.cs" />
+    <Compile Include="dominio\tbparceiros_pf.cs" />
+    <Compile Include="dominio\tbparceiros_socios.cs" />
+    <Compile Include="dominio\ddd.cs" />
+    <Compile Include="dominio\empprod.cs" />
+    <Compile Include="dominio\empresa.cs" />
+    <Compile Include="dominio\entidade.cs" />
+    <Compile Include="dominio\filiai.cs" />
+    <Compile Include="dominio\homecoluna.cs" />
+    <Compile Include="dominio\indicaco.cs" />
+    <Compile Include="dominio\menuadm.cs" />
+    <Compile Include="dominio\newsletter_cad.cs" />
+    <Compile Include="dominio\newsletter_tipo.cs" />
+    <Compile Include="dominio\parceiro.cs" />
+    <Compile Include="dominio\parceiro_vendas.cs" />
+    <Compile Include="dominio\pesquisa_clientes.cs" />
+    <Compile Include="dominio\pesquisa_perguntas.cs" />
+    <Compile Include="dominio\pesquisa_respostas.cs" />
+    <Compile Include="dominio\pesquisa_resultados.cs" />
+    <Compile Include="dominio\pesquisa_tipos.cs" />
+    <Compile Include="dominio\pessoa.cs" />
+    <Compile Include="dominio\produto.cs" />
+    <Compile Include="dominio\propostaparceria.cs" />
+    <Compile Include="dominio\site.cs" />
+    <Compile Include="dominio\sqlserver\cadastronew.cs" />
+    <Compile Include="dominio\sqlserver\Credito.cs" />
+    <Compile Include="dominio\sqlserver\CreditoPlanoModel.cs" />
+    <Compile Include="dominio\sqlserver\entidade.cs" />
+    <Compile Include="dominio\sqlserver\PlanosGrupo.cs" />
+    <Compile Include="dominio\StatusAtendimento.cs" />
+    <Compile Include="dominio\tbparceiro.cs" />
+    <Compile Include="dominio\tbparceiros_end.cs" />
+    <Compile Include="dominio\tbparceiros_pj.cs" />
+    <Compile Include="dominio\TiposIndicacao.cs" />
+    <Compile Include="dominio\usuario.cs" />
+    <Compile Include="dominio\vaga.cs" />
+    <Compile Include="dominio\vendedore.cs" />
+    <Compile Include="dominio\viewbemantigo.cs" />
+    <Compile Include="dominio\viewbemsite.cs" />
+    <Compile Include="dominio\viewben.cs" />
+    <Compile Include="dominio\viewconteudo.cs" />
+    <Compile Include="dominio\viewmenu.cs" />
+    <Compile Include="dominio\viewtaxas.cs" />
+    <Compile Include="dominio\vinculovaga.cs" />
+    <Compile Include="dominio\Xml\ConfiguracoesXml.cs" />
+    <Compile Include="dominio\Xml\conteudoXml.cs" />
+    <Compile Include="indicasoes\FaleFacilModel.cs" />
+    <Compile Include="indicasoes\IndicacaoBemEscolhidoModel.cs" />
+    <Compile Include="indicasoes\IndicacaoBlackFriday2017Model.cs" />
+    <Compile Include="indicasoes\IndicacaoCompraInternetModel.cs" />
+    <Compile Include="indicasoes\IndicacaoEmailModel.cs" />
+    <Compile Include="indicasoes\IndicacaoFaleConoscoModel.cs" />
+    <Compile Include="indicasoes\IndicacaoFaleFacilModel.cs" />
+    <Compile Include="indicasoes\IndicacaoIncompletaModel.cs" />
+    <Compile Include="indicasoes\IndicacaoLigacaoModel.cs" />
+    <Compile Include="indicasoes\IndicacaoLigamosModel.cs" />
+    <Compile Include="indicasoes\IndicacaoPgtoModel.cs" />
+    <Compile Include="indicasoes\IndicacaoRapidaModel.cs" />
+    <Compile Include="indicasoes\IndicacaoVisitaModel.cs" />
+    <Compile Include="indicasoes\LigamosparaVoceModel.cs" />
+    <Compile Include="indicasoes\OuvidoriaModel.cs" />
+    <Compile Include="logins\EsqueciMinhaSenhaAlterarModel.cs" />
+    <Compile Include="logins\LembrarSenhaModel.cs" />
+    <Compile Include="logins\IdentificacaoParceiro.cs" />
+    <Compile Include="logins\LoginBusca.cs" />
+    <Compile Include="logins\LoginCookies.cs" />
+    <Compile Include="logins\LoginModel.cs" />
+    <Compile Include="logins\LoginRestritoBusca.cs" />
+    <Compile Include="logins\LoginRestritoCookies.cs" />
+    <Compile Include="logins\LoginRestritoModel.cs" />
+    <Compile Include="logins\PropostaCookies.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="parceiros\LoginParceiroCookies.cs" />
+    <Compile Include="parceiros\LoginParceiroBusca.cs" />
+    <Compile Include="parceiros\VendasParceiro.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="repositorio\AutorizacaoCobrancaDigitalCotaRepositorio.cs" />
+    <Compile Include="repositorio\AutorizacaoCobrancaDigitalRepositorio.cs" />
+    <Compile Include="repositorio\BensRepositorio.cs" />
+    <Compile Include="repositorio\conteditoriaRepositorio.cs" />
+    <Compile Include="repositorio\conteudoRepositorio.cs" />
+    <Compile Include="repositorio\conteudosanexoRepositorio.cs" />
+    <Compile Include="repositorio\ParceriasRepositorio.cs" />
+    <Compile Include="repositorio\ProdutosdiversosRepositorio.cs" />
+    <Compile Include="repositorio\EmpresasRepositorio.cs" />
+    <Compile Include="repositorio\FiliaisRepositorio.cs" />
+    <Compile Include="repositorio\GruposRepositorio.cs" />
+    <Compile Include="repositorio\homecolunaRepositorio.cs" />
+    <Compile Include="repositorio\IndicacoesRepositorio.cs" />
+    <Compile Include="repositorio\menuadmRepositorio.cs" />
+    <Compile Include="repositorio\ParceirosRepositorio.cs" />
+    <Compile Include="repositorio\ProdutosRepositorio.cs" />
+    <Compile Include="repositorio\SitesRepositorio.cs" />
+    <Compile Include="repositorio\usuarioRepositorio.cs" />
+    <Compile Include="repositorio\VendedoresRepositorio.cs" />
+    <Compile Include="repositorio\ViewsRepositorio.cs" />
+    <Compile Include="Seguranca\AcessoRestritoAttribute.cs" />
+    <Compile Include="Seguranca\AutenticacaoDePaginas.cs" />
+    <Compile Include="Seguranca\AutenticacaoServico.cs" />
+    <Compile Include="Seguranca\ClassEncryptDescrypt.cs" />
+    <Compile Include="Servicos\ApiBuscas.cs" />
+    <Compile Include="Servicos\ApiExpResults.cs" />
+    <Compile Include="Servicos\ApiTrasacoes.cs" />
+    <Compile Include="Servicos\BemEscolhidoModel.cs" />
+    <Compile Include="Servicos\BenDetalheModel.cs" />
+    <Compile Include="Servicos\BuscaCidadesModel.cs" />
+    <Compile Include="Servicos\BuscaProfissoesModel.cs" />
+    <Compile Include="Servicos\CadastroClienteModel.cs" />
+    <Compile Include="Servicos\CadastroClienteValidar.cs" />
+    <Compile Include="Servicos\CampainhaSuperpayModel.cs" />
+    <Compile Include="Servicos\CartoesCredito.cs" />
+    <Compile Include="Servicos\ClienteBusiness.cs" />
+    <Compile Include="Servicos\ClienteConfirmarModel.cs" />
+    <Compile Include="Servicos\BuscaCepModel.cs" />
+    <Compile Include="Servicos\ClienteContratoPropostaCnpModel.cs" />
+    <Compile Include="Servicos\ClienteCotasModel.cs" />
+    <Compile Include="Servicos\CobrancaDigitalRetornoModel.cs" />
+    <Compile Include="Servicos\CriarIndicacaoVenda.cs" />
+    <Compile Include="Servicos\IndicacaoIncompleta.cs" />
+    <Compile Include="Servicos\ParceirosModel.cs" />
+    <Compile Include="Servicos\PrazosDisponiveisConsulta.cs" />
+    <Compile Include="Servicos\PrazosDisponiveisDetalhe.cs" />
+    <Compile Include="Servicos\PrazosDisponiveisIdentificador.cs" />
+    <Compile Include="Servicos\ProdutosHelper.cs" />
+    <Compile Include="Servicos\PropostaParceriaViewModel.cs" />
+    <Compile Include="Servicos\CriarPessoa.cs" />
+    <Compile Include="Servicos\CriarProposta.cs" />
+    <Compile Include="Servicos\DetalhePlanoModel.cs" />
+    <Compile Include="Servicos\EmailModel.cs" />
+    <Compile Include="Servicos\EmissaoBoletoModel.cs" />
+    <Compile Include="Servicos\EmissaoBoletoRetornoModel.cs" />
+    <Compile Include="Servicos\EstadosCivisModel.cs" />
+    <Compile Include="Servicos\ExcludeCamposIndicacao.cs" />
+    <Compile Include="Servicos\Febraban.cs" />
+    <Compile Include="Servicos\GerarDocsCompra.cs" />
+    <Compile Include="Servicos\GerarPropostaHTML.cs" />
+    <Compile Include="Servicos\IndicacoesRelatorioModel.cs" />
+    <Compile Include="Servicos\MudarPessoa.cs" />
+    <Compile Include="Servicos\NewsletterModel.cs" />
+    <Compile Include="Servicos\PagConsorcio.cs" />
+    <Compile Include="Servicos\ParceriaViewModel.cs" />
+    <Compile Include="Servicos\PessoaEmailModel.cs" />
+    <Compile Include="Servicos\PessoaEnderecoModel.cs" />
+    <Compile Include="Servicos\PessoaFisicaModel.cs" />
+    <Compile Include="Servicos\PessoaIdentificaModel.cs" />
+    <Compile Include="Servicos\PessoaJuridicaModel.cs" />
+    <Compile Include="Servicos\PessoaRetornoModel.cs" />
+    <Compile Include="Servicos\PessoaTelefoneModel.cs" />
+    <Compile Include="Servicos\PFModel.cs" />
+    <Compile Include="Servicos\PJModel.cs" />
+    <Compile Include="Servicos\PRModel.cs" />
+    <Compile Include="Servicos\PropostaModel.cs" />
+    <Compile Include="Servicos\PropostaRetornoModel.cs" />
+    <Compile Include="Servicos\RdStation\Lead.cs" />
+    <Compile Include="Servicos\RdStation\LeadFaleConosco.cs" />
+    <Compile Include="Servicos\RdStation\LeadIndicacao.cs" />
+    <Compile Include="Servicos\RdStation\RdStationApiClient.cs" />
+    <Compile Include="Servicos\RdStation\RdStationBusiness.cs" />
+    <Compile Include="Servicos\SegundaViaBoleto.cs" />
+    <Compile Include="Servicos\SegundaViaBoletoTaxas.cs" />
+    <Compile Include="Servicos\SiteLayout.cs" />
+    <Compile Include="Servicos\TokenModel.cs" />
+    <Compile Include="Servicos\VerificarVendaIndicadaModel.cs" />
+    <Compile Include="Servicos\VerificarVendaIndicadaResult.cs" />
+    <Compile Include="trabalheconosco\CurriculoApiModel.cs" />
+    <Compile Include="trabalheconosco\CurriculoBaseModel.cs" />
+    <Compile Include="trabalheconosco\CurriculoModel.cs" />
+    <Compile Include="trabalheconosco\VagaModel.cs" />
+    <Compile Include="trabalheconosco\VinculoVagaViewModel.cs" />
+    <Compile Include="Uteis\ClienteExisteAtribute.cs" />
+    <Compile Include="Uteis\FileExtensionsAttribute.cs" />
+    <Compile Include="Uteis\FileSizeAttribute.cs" />
+    <Compile Include="Uteis\FormValueRequiredAttribute.cs" />
+    <Compile Include="Uteis\RespostaCliente.cs" />
+    <Compile Include="Xml\ConfiguracoesXml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Model2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model2.edmx.diagram">
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\exp.core\exp.core.csproj">
+      <Project>{b89eee44-8995-45f3-9d32-dd3163ff6785}</Project>
+      <Name>exp.core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Drawing;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Web;
 using System.Web.Mvc;
-using exp.core;
 using exp.core.Utilitarios;
-using exp.dados;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using Font = iTextSharp.text.Font;
+using exp.core;
+using exp.dados;
 
 namespace exp.web.Controllers.Contratos
 {
@@ -42,9 +42,9 @@ namespace exp.web.Controllers.Contratos
             var _bgc = ColorTranslator.FromHtml("#ECEDEF");
             var fnd = new BaseColor(_bgc.R, _bgc.G, _bgc.B);
 
-            var fontbase = FontFactory.GetFont(FontFactory.COURIER, 7, Font.NORMAL, BaseColor.BLUE);
+            Font fontbase = FontFactory.GetFont(FontFactory.COURIER, 7, iTextSharp.text.Font.NORMAL, BaseColor.BLUE);
 
-            var document = new Document(PageSize.A4); //, 10, 10, 10, 10);
+            Document document = new Document(iTextSharp.text.PageSize.A4);//, 10, 10, 10, 10);
 
             var stream = new MemoryStream();
 

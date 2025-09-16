@@ -1,13 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using exp.core.Utilitarios;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.Mvc;
 using iTextSharp.text;
+using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
+using exp.core;
+using exp.dados;
+using exp.core.Utilitarios;
 
 namespace exp.web.Code
 {
     public class GerarContratoPdf
     {
+
         public string path_do_contrato { get; set; }
         public string path_do_proposta { get; set; }
         public string path_do_boleto { get; set; }
@@ -20,19 +29,17 @@ namespace exp.web.Code
 
         public bool executar()
         {
-            var doc = new Document(PageSize.A4, 20, 20, 20, 20);
+            Document doc = new Document(iTextSharp.text.PageSize.A4, 20, 20, 20, 20);
 
             try
             {
-                var wri = PdfWriter.GetInstance(doc,
-                    new FileStream(path_do_contrato + nome_do_contrato, FileMode.OpenOrCreate));
 
+                PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream(path_do_contrato + nome_do_contrato, FileMode.OpenOrCreate));
                 #region imagem de fundo
-
                 //Imagem de fundo
-                var imagepath = ServerMap.Path("~/Content/imagesboleto/");
+                string imagepath = ServerMap.Path("~/Content/imagesboleto/");
                 // add a image
-                var ImgFnd = Image.GetInstance(imagepath + "/br-loader.jpg");
+                Image ImgFnd = Image.GetInstance(imagepath + "/br-loader.jpg");
                 //Resize image depend upon your need
                 //For give the size to image
                 ImgFnd.ScaleToFit(600, 369);
@@ -41,16 +48,13 @@ namespace exp.web.Code
                 //If you want to give absolute/specified fix position to image.
                 ImgFnd.SetAbsolutePosition(7, 10);
                 //===========
-
                 #endregion
 
                 doc.Open();
 
 
                 // BOLETO /////////////////////////////////////////////////////////////////////////////////////////////////////
-
                 #region anexar o boleto ao documnto
-
                 //if (System.IO.File.Exists(path_do_boleto + nome_do_boleto))
                 //{
                 //    PdfReader ReaderBoleto = new PdfReader(path_do_boleto + nome_do_boleto);
@@ -63,7 +67,6 @@ namespace exp.web.Code
                 //        doc.Add(ImgFnd);// imagem de fundo em todas as páginas
                 //    }
                 //}
-
                 #endregion
 
 
@@ -71,10 +74,8 @@ namespace exp.web.Code
 
 
                 // PROPOSTA /////////////////////////////////////////////////////////////////////////////////////////////////////
-
                 #region anexar a proposta ao documnto
-
-                var ReaderProposta = new PdfReader(path_do_proposta + nome_da_proposta);
+                PdfReader ReaderProposta = new PdfReader(path_do_proposta + nome_da_proposta);
 
                 //int y;
 
@@ -84,21 +85,16 @@ namespace exp.web.Code
                     var importedPage = wri.GetImportedPage(ReaderProposta, i);
                     var contentByte = wri.DirectContent;
                     contentByte.AddTemplate(importedPage, 0, 0);
-                    doc.Add(ImgFnd); // imagem de fundo em todas as páginas
+                    doc.Add(ImgFnd);// imagem de fundo em todas as páginas
                 }
-
                 #endregion
 
 
                 // CONTRATO /////////////////////////////////////////////////////////////////////////////////////////////////////
-
                 #region anexar modelo do contrato ao documnto
-
-                var ReaderContrato =
-                    new PdfReader(path_do_contrato.Replace("propostas", "") + "/modelo/" + contrato_administradora);
+                PdfReader ReaderContrato = new PdfReader(path_do_contrato.Replace("propostas","") + "/modelo/" + contrato_administradora);
 
                 #region comentarios de exmplo
-
                 //PdfContentByte cb = wri.DirectContent;
 
                 //// select the font properties
@@ -122,7 +118,6 @@ namespace exp.web.Code
                 //PdfImportedPage page = wri.GetImportedPage(reader, 1);
                 //cb.AddTemplate(page, 0, 0);
                 //doc.NewPage();
-
                 #endregion
 
                 //int y;
@@ -138,9 +133,8 @@ namespace exp.web.Code
                     //contentByte.ShowTextAligned(PdfContentByte.ALIGN_LEFT, "", 200, 200, 0);
                     //contentByte.EndText();
                     contentByte.AddTemplate(importedPage, 0, 0);
-                    doc.Add(ImgFnd); // imagem de fundo em todas as páginas
+                    doc.Add(ImgFnd);// imagem de fundo em todas as páginas
                 }
-
                 #endregion
 
                 //doc.NewPage();
@@ -162,6 +156,7 @@ namespace exp.web.Code
                 //throw;
                 throw new IndexOutOfRangeException();
             }
+
         }
     }
 }

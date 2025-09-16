@@ -1,22 +1,22 @@
-﻿using System;
-using System.Drawing;
-using System.IO;
-using System.Web.Hosting;
-using exp.dados;
+﻿using exp.dados;
 using exp.web.Template.Models;
 using iTextSharp.text;
 using iTextSharp.text.html.simpleparser;
 using iTextSharp.text.pdf;
-using iTextSharp.text.pdf.draw;
 using RazorEngine;
-using Font = iTextSharp.text.Font;
-using Image = iTextSharp.text.Image;
-using Rectangle = iTextSharp.text.Rectangle;
+using RazorEngine.Templating;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.Hosting;
 
 namespace exp.web.Code
 {
     public class GerarParceiroPdf
     {
+
         private BaseColor CorNoProposta { get; set; }
         private BaseColor CorFnd { get; set; }
         private BaseColor bgcolor { get; set; }
@@ -25,68 +25,69 @@ namespace exp.web.Code
         {
             Document doc = null;
             PdfWriter wri = null;
-            var pathPDF = HostingEnvironment.MapPath("~/content/propostasparceria/");
-            var nomePDF = "propostaparceria_" + parceiro.id + ".pdf";
+            string pathPDF = HostingEnvironment.MapPath("~/content/propostasparceria/");
+            string nomePDF = "propostaparceria_" + parceiro.id + ".pdf";
 
             try
             {
+
+
                 if (File.Exists(pathPDF + nomePDF))
                     return nomePDF;
 
-                var IdSCP = parceiro.id_site; // Validar melhor
+                int IdSCP = parceiro.id_site; // Validar melhor
 
                 var layout = Layout.Gerar(IdSCP);
 
                 //string siteUrl = Parametros.GetParameter("URL_SCP_SITE", IdSCP)?.ToUpper();
 
 
-                doc = new Document(PageSize.A4, 20, 20, 20, 20);
+                doc = new Document(iTextSharp.text.PageSize.A4, 20, 20, 20, 20);
                 wri = PdfWriter.GetInstance(doc, new FileStream(pathPDF + nomePDF, FileMode.OpenOrCreate));
 
-                var linebreak1 = new Chunk(new DottedLineSeparator());
+                Chunk linebreak1 = new Chunk(new iTextSharp.text.pdf.draw.DottedLineSeparator());
 
                 #region Imagens
-
                 //imagens =============================================================================================
                 Image logo = null;
 
                 //string logoPath = HostingEnvironment.MapPath("~/Content/logos/" + layout.logomarca);
-                var logoPath = HostingEnvironment.MapPath("~/Content/logosparceria/" + IdSCP + ".png");
+                string logoPath = HostingEnvironment.MapPath("~/Content/logosparceria/" + IdSCP + ".png");
 
                 //if (!string.IsNullOrEmpty(Layout.logomarca))
                 //{
                 if (File.Exists(logoPath))
+                {
                     logo = Image.GetInstance(logoPath);
+                }
                 else
+                {
                     logo = null;
+                }
 
                 #endregion
 
                 #region Padrões
-
                 //Cor cinza abaixo do nuemro da proposta
-                var _cfn = ColorTranslator.FromHtml(layout.CorFndTabela); //
+                System.Drawing.Color _cfn = System.Drawing.ColorTranslator.FromHtml(layout.CorFndTabela);//
                 CorFnd = new BaseColor(_cfn.R, _cfn.G, _cfn.B);
-
                 #endregion
 
                 //imagens =============================================================================================
 
                 #region Fonts
-
                 //fontes =============================================================================================
-                var fntTableFont12proposta = FontFactory.GetFont("Arial", 11, Font.NORMAL, CorNoProposta);
-                var fntTableFont12 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
-                var fntTableFont16 = FontFactory.GetFont("Arial", 16, Font.BOLD, BaseColor.BLACK);
-                var fntTableFont16blue = FontFactory.GetFont("Arial", 16, Font.BOLD, BaseColor.BLUE);
+                Font fntTableFont12proposta = FontFactory.GetFont("Arial", 11, Font.NORMAL, CorNoProposta);
+                Font fntTableFont12 = FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.BLACK);
+                Font fntTableFont16 = FontFactory.GetFont("Arial", 16, Font.BOLD, BaseColor.BLACK);
+                Font fntTableFont16blue = FontFactory.GetFont("Arial", 16, Font.BOLD, BaseColor.BLUE);
                 //fontes =============================================================================================
-
                 #endregion
 
                 doc.Open();
 
 
-                var myTable = new PdfPTable(2);
+                PdfPTable myTable = new PdfPTable(2);
                 myTable.WidthPercentage = 100;
                 myTable.HorizontalAlignment = 0;
                 myTable.SpacingAfter = 0;
@@ -100,7 +101,7 @@ namespace exp.web.Code
                 {
                     //logo.ScalePercent(24f);
                     logo.ScalePercent(50f);
-                    var tr1td1 = new PdfPCell(logo);
+                    PdfPCell tr1td1 = new PdfPCell(logo);
                     //tr1td1.Image.ScaleToFitHeight = false;
                     tr1td1.Border = Rectangle.NO_BORDER;
                     tr1td1.Padding = 0f;
@@ -110,9 +111,9 @@ namespace exp.web.Code
                 }
 
 
-                var templateFilePath = HostingEnvironment.MapPath("~/template/PropostaParceriaTemplate.cshtml");
-
-                var model = new PropostaParceriaPdfModel
+                string templateFilePath = HostingEnvironment.MapPath("~/template/PropostaParceriaTemplate.cshtml");
+                
+                PropostaParceriaPdfModel model = new PropostaParceriaPdfModel()
                 {
                     Parceiro = parceiro,
                     Layout = layout,
@@ -120,24 +121,24 @@ namespace exp.web.Code
                 };
 
 
-                var mensagemProposta = Razor.Parse(File.ReadAllText(templateFilePath), model, null, null);
+                string mensagemProposta = Razor.Parse(File.ReadAllText(templateFilePath), model, null, null);
 
 
                 #region Converte HTML em PDF
-
-                var cellcodbar = new PdfPCell();
+                PdfPCell cellcodbar = new PdfPCell();
                 cellcodbar.VerticalAlignment = Element.ALIGN_MIDDLE;
                 cellcodbar.Border = Rectangle.NO_BORDER;
 
-                var htmlarraylist = HTMLWorker.ParseToList(new StringReader(mensagemProposta), null);
-                for (var k = 0; k < htmlarraylist.Count; k++)
+                List<IElement> htmlarraylist = HTMLWorker.ParseToList(new StringReader(mensagemProposta), null);
+                for (int k = 0; k < htmlarraylist.Count; k++)
+                {
                     //doc.Add((IElement)htmlarraylist[k]);
-                    cellcodbar.AddElement(htmlarraylist[k]);
-
+                    cellcodbar.AddElement((IElement)htmlarraylist[k]);
+                }
                 #endregion
 
                 ///AQUI==========================================================================
-                var tr3td1 = new PdfPCell(cellcodbar);
+                PdfPCell tr3td1 = new PdfPCell(cellcodbar);
                 tr3td1.Colspan = 2;
                 tr3td1.Padding = 0f;
                 tr3td1.BorderColorLeft = BaseColor.WHITE;
@@ -168,7 +169,6 @@ namespace exp.web.Code
                     wri.Close();
                     wri.Dispose();
                 }
-
                 if (doc != null)
                 {
                     doc.Close();
@@ -181,6 +181,8 @@ namespace exp.web.Code
                 return "ERRO: " + ex.Message;
                 throw;
             }
+
         }
+
     }
 }

@@ -6,7 +6,6 @@ using System.Net;
 using System.Net.Sockets;
 using System.Web;
 using System.Web.Mvc;
-using System.Drawing;
 using exp.core.Utilitarios;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
@@ -40,7 +39,7 @@ namespace exp.web.Controllers.Contratos
 
             if (Funcao.IsNumeric(id)) id = id.PadLeft(6, '0');
 
-            var _bgc = ColorTranslator.FromHtml("#ECEDEF");
+            var _bgc = System.Drawing.ColorTranslator.FromHtml("#ECEDEF");
             var fnd = new BaseColor(_bgc.R, _bgc.G, _bgc.B);
 
             Font fontbase = FontFactory.GetFont(FontFactory.COURIER, 7, iTextSharp.text.Font.NORMAL, BaseColor.BLUE);
@@ -185,3 +184,4 @@ namespace exp.web.Controllers.Contratos
     }
 
 }
+

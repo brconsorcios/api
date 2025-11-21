@@ -24,7 +24,6 @@ namespace exp.web.Code
         public string NM_empresa { get; set; }
 
         public indicaco indicacao { get; set; }
-        public cliente cliente { get; set; }
         public site site { get; set; }
         public SiteLayout Layout { get; set; }
 
@@ -340,7 +339,6 @@ namespace exp.web.Code
 
                 GerarPropostaHTML GerarHTML = new GerarPropostaHTML();
                 GerarHTML.indicacao = indicacao;
-                GerarHTML.cliente = cliente;
                 GerarHTML.site = site;
                 GerarHTML.Layout = Layout;
                 StringBuilder HTML = GerarHTML.html();
@@ -419,10 +417,6 @@ namespace exp.web.Code
                 StringBuilder THERMO = new System.Text.StringBuilder();
 
                 bool grupo_mapfre = false;
-                using (var db = new Entities01())
-                {
-                    grupo_mapfre = db.contratos.Any(x => x.grupo == indicacao.cd_grupo.Trim() && x.empresa_id == 13);
-                }
 
                     THERMO.Append("<br />");
                 THERMO.Append("<table width=\"100%\" bordercolor=\"" + Layout.CorFndTitulos + "\" border=\"0\" cellspacing=\"0\" cellpadding=\"2\">   ");
@@ -461,7 +455,7 @@ namespace exp.web.Code
                     THERMO.Append("           <li align=\"justify\">DECLARAÇÕES DO <strong>PROPONENTE</strong>:");
                     THERMO.Append("             <br />");
                     THERMO.Append("               <strong>A)</strong> O Proponente declara que concorda com sua inclusão como segurado no Contrato de Seguro, descrito no item 5, acima, e que <strong>GOZA DE BOA SAÚDE, NÃO TEM DEFICIÊNCIA DE ÓRGÃOS, MEMBROS OU SENTIDOS, E NAO SOFRE DE MOLÉSTIA GRAVE DESDE OS TRÊS ÚLTIMOS ANOS.</strong>");
-                    THERMO.Append("               <br /><strong>B)</strong> O <strong>PROPONENTE</strong> DECLARA QUE TEM CONDIÇÕES FINANCEIRAS PARA ADERIR AO GRUPO DE CONSÓRCIO OBJETO DESTA PROPOSTA, E QUE TEM RENDIMENTOS SUFICIENTES PARA ASSUMIR OS COMPROMISSOS CONTRATUAIS DE PARTICIPAÇÃO NO GRUPO DE CONSÓRCIO, DISPONDO-SE A COMPROVÁ-LOS PERANTE A <strong>ADMINISTRADORA</strong>, SE NECESSÁRIOS PARA A APROVAÇÃO DE SUA ADESÃO, DECLARANDO DESDE JÁ QUE SEUS SALÁRIOS/FATURAMENTOS MENSAIS SÃO DE R$ <strong>" + cliente.vl_rendacapital.ToString("#,#.00;(#,#.00)") + "</strong>.");
+                    THERMO.Append("               <br /><strong>B)</strong> O <strong>PROPONENTE</strong> DECLARA QUE TEM CONDIÇÕES FINANCEIRAS PARA ADERIR AO GRUPO DE CONSÓRCIO OBJETO DESTA PROPOSTA, E QUE TEM RENDIMENTOS SUFICIENTES PARA ASSUMIR OS COMPROMISSOS CONTRATUAIS DE PARTICIPAÇÃO NO GRUPO DE CONSÓRCIO, DISPONDO-SE A COMPROVÁ-LOS PERANTE A <strong>ADMINISTRADORA</strong>, SE NECESSÁRIOS PARA A APROVAÇÃO DE SUA ADESÃO." + "</strong>.");
                     THERMO.Append("               <br /><strong>C)</strong> O <strong>PROPONENTE</strong> ACEITA SER INCLUÍDO EM GRUPO DE CONSÓRCIO CUJAS ASSEMBLEIAS SEJAM REALIZADAS NA SEDE DA <strong>ADMINISTRADORA</strong> OU EM LOCAIS A SEREM DEFINIDOS POR ELA, AINDA QUE FORA DE SEU DOMICÍLIO, E QUE TAL FATO NÃO OBSTA SUA EFETIVA PARTICIPAÇÃO NO GRUPO DE CONSÓRCIO.");
                     THERMO.Append("             <br />");
                     THERMO.Append("           </li>");
@@ -471,7 +465,7 @@ namespace exp.web.Code
                     THERMO.Append("           <li align=\"justify\">DECLARAÇÕES DO <strong>PROPONENTE</strong>:");
                     THERMO.Append("             <br />");
                     THERMO.Append("               <strong>A)</strong> O <strong>PROPONENTE</strong> DECLARA QUE CONCORDA COM SUA INCLUSÃO COMO SEGURADO DE UMA DAS MODALIDADES DE CONTRATO DE SEGURO ESTIPULADAS NO ITEM 5 ACIMA, E QUE NÃO TEM RESTRIÇÕES DE SAÚDE E IDADE QUE O IMPEÇA DE SE TORNAR SEGURADO, CONFORME REQUISITOS EXIGIDOS PELA SEGURADORA.");
-                    THERMO.Append("               <br /><strong>B)</strong> O <strong>PROPONENTE</strong> DECLARA QUE TEM CONDIÇÕES FINANCEIRAS PARA ADERIR AO GRUPO DE CONSÓRCIO OBJETO DESTA PROPOSTA, E QUE TEM RENDIMENTOS SUFICIENTES PARA ASSUMIR OS COMPROMISSOS CONTRATUAIS DE PARTICIPAÇÃO NO GRUPO DE CONSÓRCIO, DISPONDO-SE A COMPROVÁ-LOS PERANTE A <strong>ADMINISTRADORA</strong>, SE NECESSÁRIOS PARA A APROVAÇÃO DE SUA ADESÃO, DECLARANDO DESDE JÁ QUE SEUS SALÁRIOS/FATURAMENTOS MENSAIS SÃO DE R$ <strong>" + cliente.vl_rendacapital.ToString("#,#.00;(#,#.00)") + "</strong>.");
+                    THERMO.Append("               <br /><strong>B)</strong> O <strong>PROPONENTE</strong> DECLARA QUE TEM CONDIÇÕES FINANCEIRAS PARA ADERIR AO GRUPO DE CONSÓRCIO OBJETO DESTA PROPOSTA, E QUE TEM RENDIMENTOS SUFICIENTES PARA ASSUMIR OS COMPROMISSOS CONTRATUAIS DE PARTICIPAÇÃO NO GRUPO DE CONSÓRCIO, DISPONDO-SE A COMPROVÁ-LOS PERANTE A <strong>ADMINISTRADORA</strong>, SE NECESSÁRIOS PARA A APROVAÇÃO DE SUA ADESÃO." + "</strong>.");
                     THERMO.Append("               <br /><strong>C)</strong> O <strong>PROPONENTE</strong> ACEITA SER INCLUÍDO EM GRUPO DE CONSÓRCIO CUJAS ASSEMBLEIAS SEJAM REALIZADAS NA SEDE DA <strong>ADMINISTRADORA</strong> OU EM LOCAIS A SEREM DEFINIDOS POR ELA, AINDA QUE FORA DE SEU DOMICÍLIO, E QUE TAL FATO NÃO OBSTA SUA EFETIVA PARTICIPAÇÃO NO GRUPO DE CONSÓRCIO.");
                     THERMO.Append("             <br />");
                     THERMO.Append("           </li>");

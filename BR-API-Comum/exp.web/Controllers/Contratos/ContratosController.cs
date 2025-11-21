@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Web;
 using System.Web.Mvc;
+using System.Drawing;
 using exp.core.Utilitarios;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
@@ -182,4 +183,5 @@ namespace exp.web.Controllers.Contratos
                 "Contrato-Grupo-" + id + "-" + hoje.ToString("ddMMyyyyhhmmss") + ".pdf");
         }
     }
+
 }
